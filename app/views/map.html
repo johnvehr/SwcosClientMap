@@ -1,0 +1,45 @@
+<div class="container">
+  <div class="row well">
+    <div class="col-lg-10">
+      <ui-gmap-google-map center='map.center' zoom='map.zoom'>
+
+        <ui-gmap-markers models="siteMarkers" click="'displaySiteData'" coords="'self'" icon="'icon'">
+        </ui-gmap-markers>
+
+      </ui-gmap-google-map>
+    </div>
+
+    <div class="col-md-2 col-lg-3 col-sm-6">
+      <p class="help-block">Filter By School</p>
+      <ul class="list-group">
+        <li class="list-group-item" ng-repeat="school in siteSchools">
+          <div class="row">
+            <div class="col-md-6" style="padding-top:10%;">
+              {{school}}
+            </div>
+            <div class="col-md-6">
+              <input id="{{school}}" class="school" type="checkbox" ng-click="toggleSchool(school)">
+              <label class="school__label" for="{{school}}"></label>
+            </div>
+          </div>
+        </li>
+      </ul>
+
+
+        <p class="help-block">Filter By Affiliate</p>
+        <ul class="list-group">
+          <li class="list-group-item" ng-repeat="affiliate in siteAffiliates">
+            <div class="row">
+              <div class="col-md-6" style="padding-top:10%;">
+                {{affiliate}}
+              </div>
+              <div class="col-md-6">
+                <input id="{{affiliate}}" class="school" type="checkbox" ng-click="toggleSchool(affiliate)" >
+                <label id="test" class="school__label" for="{{affiliate}}"></label>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+  </div>
+</div>
