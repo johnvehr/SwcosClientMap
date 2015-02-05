@@ -8,7 +8,7 @@
  * Controller of the swcosClientMapApp
  */
 angular.module('swcosClientMapApp')
-  .controller('MapCtrl', function ($scope,$http,$location,$log) {
+  .controller('MapCtrl', function ($scope,$http,$modal,$location,$log) {
 
     //$scope.map = { center: { latitude: 39.2877623, longitude: -76.6185118 }, zoom: 12 };
     $http.get('http://localhost:9000/api/uploads').success(function(sites){

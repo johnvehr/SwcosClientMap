@@ -1,3 +1,53 @@
+<script type="text/ng-template" id="displaySiteData.html">
+
+<div class="modal-body">
+  <div class="row">
+    <div class="col-md-6">
+
+      <h1>{{site.Site}}</h1>
+      <p>{{site['Site Description']}}</p>
+      <p ng-hide="site['Site Description']">No site description provided.</p>
+      <h4>UMB Students Involved</h4>
+
+      <div class="col-md-6">
+        <chartist class="ct-chart ct-golden-section" chartist-data="data" chartist-chart-type="Pie"></chartist>
+        <h4>{{stud_Sum}} Students</h4>
+        <div style="float:left;">
+          <p ng-repeat="label in dataOutLabels">{{label}}</p>
+        </div>
+        <div style="float:right;">
+          <p ng-repeat="key in data.series">{{key}}</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+      <chartist class="ct-chart ct-golden-section" chartist-data="dataDiscipline" chartist-chart-type="Pie"></chartist>
+      <h4>SWCOS Disciplines</h4>
+      <div style="float:left;">
+      <p ng-repeat="label in dataDisciplineOutLabels">{{label}}</p>
+      </div>
+      <div style="float:right;">
+      <p ng-repeat="key in dataDiscipline.series">{{key}}</p>
+      </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+    <h4>Median Income</h4>
+    <chartist class="ct-chart" chartist-data="incomeData" chartist-chart-type="Bar" chartist-chart-options="barOptions" chartist-responsive-options="barResponsiveOptions"></chartist>
+    <h4>School Absenteeism</h4>
+    <chartist class="ct-chart" chartist-data="schoolData" chartist-chart-type="Bar" chartist-chart-options="barOptions" chartist-responsive-options="barResponsiveOptions"></chartist>
+    <h4>Life Expectancy</h4>
+    <chartist class="ct-chart" chartist-data="lifeData" chartist-chart-type="Bar" chartist-chart-options="barOptions" chartist-responsive-options="barResponsiveOptions"></chartist>
+    </div>
+
+  </div>
+</div>
+<div class="modal-footer">
+<button class="btn btn-default swcos-close" ng-click="ok()">Close</button>
+
+</div>
+</script>
+
 <div class="container">
   <div class="row well">
     <div class="col-lg-9">

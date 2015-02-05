@@ -16,7 +16,10 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
-    'uiGmapgoogle-maps'
+    'uiGmapgoogle-maps',
+    'ui.bootstrap',
+    'ui.router',
+    'angular-chartist'
   ])
   .config(function ($routeProvider) {
     $routeProvider
