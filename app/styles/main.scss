@@ -12,6 +12,7 @@ $social_work: #ffcb00;
 $dark_grey: #1a1a1a;
 $marker_: #ffe202;
 $swcos_red: rgba(229, 25, 55,1);
+
 .browsehappy {
   margin: 0.2em 0;
   background: #ccc;
@@ -23,6 +24,18 @@ $swcos_red: rgba(229, 25, 55,1);
 body {
   padding-top: 20px;
   padding-bottom: 20px;
+}
+
+body.modal-open .supreme-container{
+  -webkit-filter: blur(15px);
+  -moz-filter: blur(15px);
+  -o-filter: blur(15px);
+  -ms-filter: blur(15px);
+  filter: blur(15px);
+
+  -webkit-box-shadow: inset 6px 6px 31px 0px rgba(135,135,135,0.71);
+  -moz-box-shadow: inset 6px 6px 31px 0px rgba(135,135,135,0.71);
+  box-shadow: inset 6px 6px 31px 0px rgba(135,135,135,0.71);
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -80,7 +93,7 @@ body {
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
   .container {
-    max-width: 730px;
+  //  max-width: 730px;
   }
 
   /* Remove the padding we set earlier */
@@ -100,6 +113,9 @@ body {
   }
 }
 
+.list-group-item {
+  padding:10px 5px;
+}
 .school{
   visibility: hidden;
 }
@@ -156,4 +172,41 @@ body {
 
 .school__label:after,.school__label:before {
   -webkit-transition: background 0.2s ease-out, left 0.2s ease-out;
+}
+
+.modal-dialog {
+  width:75%;
+}
+
+.modal-body{
+  color:#4f4f4f;
+  .row {
+    h1{
+      text-transform:uppercase;
+      font-size:20px;
+    }
+  }
+}
+
+.swcos-close{
+  float:right;
+  text-transform:uppercase;
+  color:#fff;
+  background:#ffcd00;
+  border:none;
+  }
+
+.modal-backdrop {
+  background:#FFF;
+}
+.modal-content{
+  background:rgba(252, 252, 252, 0.5);
+  border:none;
+  box-shadow:none;
+}
+.bars {
+  text-align:center;
+}.bar-sec {
+  padding-top:10px;
+  border-top:1px solid lightgray;
 }
