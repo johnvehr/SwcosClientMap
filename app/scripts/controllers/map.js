@@ -44,7 +44,7 @@ angular.module('swcosClientMapApp')
       function buildSiteMarkers(i,site){
         var ret = {
           id: site.id,
-          icon: '/images/swcos-marker.png',
+          icon: '/images/swcos-marker.9bdfd030.png',
           latitude: site.lat,
           longitude: site.lng,
           displaySiteData: function(){
