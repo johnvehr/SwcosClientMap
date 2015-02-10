@@ -23,11 +23,11 @@
       <!-- second pie -->
       <div class="col-md-6">
       <chartist class="ct-chart ct-golden-section" chartist-data="dataDiscipline" chartist-chart-type="Pie"></chartist>
-      <h4>SWCOS Disciplines</h4>
-      <div style="float:left;">
+      <h4>{{disc_sum}} SWCOS Disciplines</h4>
+      <div style="float:left;padding-left:0px">
       <p ng-repeat="label in dataDisciplineOutLabels"><span class="school-label"></span>{{label}}</p>
       </div>
-      <div style="float:right;">
+      <div style="float:left;padding-left:5px">
       <p ng-repeat="key in dataDiscipline.series">{{key}}</p>
       </div>
       </div>
