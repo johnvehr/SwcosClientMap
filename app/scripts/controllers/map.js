@@ -182,11 +182,14 @@ angular.module('swcosClientMapApp')
     if($scope.site){
       $scope.data = {
         //labels: dataFunc('l','students'),
+        labels: ['','','',''],
         series: dataFunc('s','students')
       }
       $scope.dataOutLabels = dataFunc('l','students')
+      console.log($scope.dataOutLabels)
       $scope.dataDiscipline = {
         //labels: dataFunc('l','discipline'),
+        labels: ['','','',''],
         series: dataFunc('s','discipline')
       }
       $scope.dataDisciplineOutLabels = dataFunc('l','discipline')
@@ -194,13 +197,16 @@ angular.module('swcosClientMapApp')
 
     var totalStudents = 0;
     for(var i in $scope.data.series){
-      totalStudents += $scope.data.series[i];$scope.stud_sum = totalStudents;
+      totalStudents += $scope.data.series[i];
     }
+    $scope.stud_sum = totalStudents;
+    console.log($scope.stud_sum)
 
     var totalDisciplines = 0;
     for(var i in $scope.dataDiscipline.series){
-      totalDisciplines += $scope.dataDiscipline.series[i];$scope.disc_sum = totalDisciplines
+      totalDisciplines += $scope.dataDiscipline.series[i];
     }
+    $scope.disc_sum = totalDisciplines
 
     $scope.options = {
       width: 300,
