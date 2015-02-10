@@ -11,7 +11,10 @@ angular.module('swcosClientMapApp')
   .controller('MapCtrl', function ($scope,$http,$modal,$location,$log) {
 
     //$scope.map = { center: { latitude: 39.2877623, longitude: -76.6185118 }, zoom: 12 };
-    $http.get('http://localhost:9000/api/uploads').success(function(sites){
+    var local_env = 'http://localhost:9000/api/uploads';
+    var prod_env = 'https://swcos-upload-engine.herokuapp.com/api/uploads';
+
+    $http.get(prod_env).success(function(sites){
       console.log(angular.fromJson(sites))
       $scope.sites = angular.fromJson(sites)
       $scope.siteTotal = $scope.sites.length
