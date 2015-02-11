@@ -138,12 +138,14 @@ p > span {
     margin-top: 28px;
   }
 }
-.gm-style {
+/*.gm-style {
   width:815px !important;
   height:700px !important;
-}
+}*/
+
 .angular-google-map-container {
   height: 832px;
+  max-height:832px;
   border:1px solid #D8D6D6;
   border-radius:4px;
   }
