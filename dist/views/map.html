@@ -1,50 +1,65 @@
 <script type="text/ng-template" id="displaySiteData.html"><div class="modal-body">
   <div class="row">
   <button class="btn btn-default swcos-close glyphicon glyphicon-remove" ng-click="ok()"></button>
-    <div class="col-md-6">
+    <div class="col-md-12">
 
-      <h1>{{site.Site}}</h1>
-      <p>{{site['Site Description']}}</p>
-      <p ng-hide="site['Site Description']">No site description provided.</p>
-      <h4>UMB Students Involved</h4>
-
-      <!-- first pie -->
-      <div class="col-md-6">
-        <chartist class="ct-chart ct-golden-section" chartist-data="data" chartist-chart-type="Pie"></chartist>
-        <h4>{{stud_sum}} Students</h4>
-        <div style="float:left;padding-left:0px;">
-          <p ng-repeat="label in dataOutLabels"><span class="school-label"></span>{{label}}</p>
+      <div class="row">
+        <!-- left side of modal -->
+        <div class="col-md-5">
+          <h1>{{site.Site}}</h1>
+          <p>{{site['Site Description']}}</p>
+          <p ng-hide="site['Site Description']">No site description provided.</p>
+          <h4>UMB Students Involved</h4>
+          <div class="row">
+            <!-- left pie -->
+            <div class="col-md-6">
+              <chartist class="ct-chart ct-golden-section" chartist-data="data" chartist-chart-type="Pie"></chartist>
+              <h4>{{stud_sum}} Students</h4>
+              <div class="row">
+                <div class="col-sm-7">
+                  <p ng-repeat="label in dataOutLabels"><span class="school-label"></span>{{label}}</p>
+                </div>
+                <div class="col-sm-2">
+                  <p ng-repeat="key in data.series">{{key}}</p>
+                </div>
+              </div>
+            </div>
+            <!-- right pie -->
+            <div class="col-md-6">
+              <chartist class="ct-chart ct-golden-section" chartist-data="dataDiscipline" chartist-chart-type="Pie"></chartist>
+              <h4>{{disc_sum}} SWCOS Discipline</h4>
+              <div class="row">
+                <div class="col-sm-12">
+                  <p ng-repeat="label in dataDisciplineOutLabels"><span class="school-label"></span>{{label}}</p>
+                </div>
+                <div class="col-sm-1">
+                  <p ng-repeat="key in dataDiscipline.series">{{key}}</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div style="float:left;padding-left:5px;">
-          <p ng-repeat="key in data.series">{{key}}</p>
+        <!-- middle spacer -->
+        <div class="col-md-2">
+        </div>
+        <!-- right side of modal -->
+        <div class="col-md-5">
+          <h1>What&#39s Happening Here</h1>
+          <div class="bar-wrapper">
+            <h4>Medium Income</h4>
+            <chartist class="ct-chart ct-golden-section" chartist-data="incomeData" chartist-chart-type="Bar" chartist-chart-options="barOptions" chartist-responsive-options="barResponsiveOptions"></chartist>
+          </div>
+          <div class="bar-wrapper">
+            <h4>School Absenteeism</h4>
+            <chartist class="ct-chart ct-golden-section" chartist-data="schoolData" chartist-chart-type="Bar" chartist-chart-options="barOptions" chartist-responsive-options="barResponsiveOptions"></chartist>
+          </div>
+          <div class="bar-wrapper bw-last">
+            <h4>Life Expectancy</h4>
+            <chartist class="ct-chart ct-golden-section" chartist-data="lifeData" chartist-chart-type="Bar" chartist-chart-options="barOptions" chartist-responsive-options="barResponsiveOptions"></chartist>
+          </div>
         </div>
       </div>
-
-      <!-- second pie -->
-      <div class="col-md-6">
-      <chartist class="ct-chart ct-golden-section" chartist-data="dataDiscipline" chartist-chart-type="Pie"></chartist>
-      <h4>{{disc_sum}} SWCOS Disciplines</h4>
-      <div style="float:left;padding-left:0px">
-      <p ng-repeat="label in dataDisciplineOutLabels"><span class="school-label"></span>{{label}}</p>
-      </div>
-      <div style="float:left;padding-left:5px">
-      <p ng-repeat="key in dataDiscipline.series">{{key}}</p>
-      </div>
-      </div>
-    </div>
-
-    <div class="col-md-6 bars">
-    <h1>What&#39s Happening Here</h1>
-    <h4>Median Income</h4>
-    <chartist class="ct-chart ct-golden-section" chartist-data="incomeData" chartist-chart-type="Bar" chartist-chart-options="barOptions" chartist-responsive-options="barResponsiveOptions"></chartist>
-    <h4 class="bar-sec">School Absenteeism</h4>
-    <chartist class="ct-chart ct-golden-section" chartist-data="schoolData" chartist-chart-type="Bar" chartist-chart-options="barOptions" chartist-responsive-options="barResponsiveOptions"></chartist>
-    <h4 class="bar-sec">Life Expectancy</h4>
-    <chartist class="ct-chart ct-golden-section" chartist-data="lifeData" chartist-chart-type="Bar" chartist-chart-options="barOptions" chartist-responsive-options="barResponsiveOptions"></chartist>
     </div>
 
   </div>
-</div>
-<div class="modal-footer">
-
-</div></script> <div class="container"> <div class="row well"> <p class="ackTitle"><strong>Interactive Map</strong> provided thanks to the generous grant from the Joseph and Harvey Meyerhoff Family Charitable Funds and the Social Work Community Outreach Services (SWCOS)</p> <div class="col-lg-9"> <ui-gmap-google-map center="map.center" zoom="map.zoom"> <ui-gmap-markers models="siteMarkers" click="'displaySiteData'" coords="'self'" icon="'icon'"> </ui-gmap-markers> </ui-gmap-google-map> </div> <div class="col-lg-3 col-sm-6"> <p class="help-block"><span></span>Filter By School<span></span></p> <ul class="list-group"> <li class="list-group-item" ng-repeat="school in siteSchools"> <div class="row"> <div class="col-md-6" style="padding-top:2%"> {{school}} </div> <div class="col-md-6"> <input id="{{school}}" class="school" type="checkbox" ng-click="toggleSchool(school)"> <label class="school__label" for="{{school}}"></label> </div> </div> </li> </ul> <p class="help-block"><span></span>Filter By Affiliate<span></span></p> <ul class="list-group"> <li class="list-group-item" ng-repeat="affiliate in siteAffiliates"> <div class="row"> <div class="col-md-6" style="padding-top:2%"> {{affiliate}} </div> <div class="col-md-6"> <input id="{{affiliate}}" class="school" type="checkbox" ng-click="toggleSchool(affiliate)"> <label id="test" class="school__label" for="{{affiliate}}"></label> </div> </div> </li> </ul> </div> </div> </div>
+</div></script> <div class="container"> <div class="row well"> <div class="header-container"> <div class="header-container-inner"> <div class="page-header"> <h1>UMB Students working in Baltimore</h1> </div> <p class="help-block">Interactive Map provided in thanks to the generous grant from the Joseph and Harvey Meyerhoff Family Charitable Funds and the Social Work Community Outreach Services (SWCOS)</p> </div> </div> <div class="col-lg-9"> <ui-gmap-google-map center="map.center" zoom="map.zoom"> <ui-gmap-markers models="siteMarkers" click="'displaySiteData'" coords="'self'" icon="'icon'"> </ui-gmap-markers> </ui-gmap-google-map> </div> <div class="col-lg-3 col-sm-6"> <p class="help-block"><span></span>Filter By School<span></span></p> <ul class="list-group"> <li class="list-group-item" ng-repeat="school in siteSchools"> <div class="row"> <div class="col-md-6" style="padding-top:2%"> {{school}} </div> <div class="col-md-6"> <input id="{{school}}" class="school" type="checkbox" ng-click="toggleSchool(school)"> <label class="school__label" for="{{school}}"></label> </div> </div> </li> </ul> <p class="help-block"><span></span>Filter By Affiliate<span></span></p> <ul class="list-group"> <li class="list-group-item" ng-repeat="affiliate in siteAffiliates"> <div class="row"> <div class="col-md-6" style="padding-top:2%"> {{affiliate}} </div> <div class="col-md-6"> <input id="{{affiliate}}" class="school" type="checkbox" ng-click="toggleSchool(affiliate)"> <label id="test" class="school__label" for="{{affiliate}}"></label> </div> </div> </li> </ul> </div> </div> </div>
