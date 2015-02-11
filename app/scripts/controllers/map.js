@@ -14,7 +14,7 @@ angular.module('swcosClientMapApp')
     var local_env = 'http://localhost:9000/api/uploads';
     var prod_env = 'https://swcos-upload-engine.herokuapp.com/api/uploads';
 
-    $http.get(local_env).success(function(sites){
+    $http.get(prod_env).success(function(sites){
       console.log(angular.fromJson(sites))
       $scope.sites = angular.fromJson(sites)
       $scope.siteTotal = $scope.sites.length
@@ -44,8 +44,8 @@ angular.module('swcosClientMapApp')
       function buildSiteMarkers(i,site){
         var ret = {
           id: site.id,
-          icon: '/images/swcos-marker.png',
-          //icon: '/images/swcos-marker.9bdfd030.png',
+          //icon: '/images/swcos-marker.png',
+          icon: '/images/swcos-marker.9bdfd030.png',
           latitude: site.lat,
           longitude: site.lng,
           displaySiteData: function(){
