@@ -50,7 +50,7 @@ body.modal-open .supreme-container{
 .header-container-inner{
   margin:0 auto;
   width:55%;
-  max-width:600px;
+  max-width:620px;
 }
 .page-header {
   width:100%;
@@ -59,13 +59,15 @@ body.modal-open .supreme-container{
   padding-bottom:0px;
 }
 .help-block{
-  margin:0 auto;
+  margin-top:0px;
   width:100%;
 }
 .well {
   background:url("/images/main-background-umb.png") center center repeat;
 }
-
+.col-md-6 p {
+  padding-left:10px;
+}
 .ackTitle {
   text-align:center;
 }
@@ -136,7 +138,11 @@ p > span {
     margin-top: 28px;
   }
 }
-.angular-google-map-container { height: 750px; }
+.angular-google-map-container {
+  height: 832px;
+  border:1px solid #D8D6D6;
+  border-radius:4px;
+  }
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
   .container {
@@ -176,7 +182,7 @@ p > span {
   border-radius: 70px;
   display: inline-block;
   position: relative;
-  margin-right: 30px;
+  margin-right: 10px;
   width: 58px;
   height: 30px;
 }
@@ -250,8 +256,11 @@ p > span {
 .modal-backdrop {
   background:#FFF;
 }
+.modal{
+  background:rgba(252, 252, 252, 0.4);
+}
 .modal-content{
-  background:rgba(252, 252, 252, 0.5);
+  background:rgba(252, 252, 252, 0);
   border:none;
   box-shadow:none;
 }

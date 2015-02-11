@@ -75,12 +75,13 @@
     <div class="header-container">
       <div class="header-container-inner">
         <div class="page-header">
-          <h1>UMB Students working in Baltimore</h1>
+          <h1>UMB Students Working in Baltimore</h1>
         </div>
         <p class="help-block">Interactive Map provided in thanks to the generous grant from the
         Joseph and Harvey Meyerhoff Family Charitable Funds and the Social Work Community Outreach Services (SWCOS)</p>
       </div>
       </div>
+        
     <div class="col-lg-9">
       <ui-gmap-google-map center='map.center' zoom='map.zoom'>
 
@@ -96,7 +97,7 @@
         <li class="list-group-item" ng-repeat="school in siteSchools">
           <div class="row">
             <div class="col-md-6" style="padding-top:2%;">
-              {{school}}
+              <p>{{school}}<p>
             </div>
             <div class="col-md-6">
               <input id="{{school}}" class="school" type="checkbox" ng-click="toggleSchool(school)">
@@ -112,9 +113,9 @@
           <li class="list-group-item" ng-repeat="affiliate in siteAffiliates">
             <div class="row">
               <div class="col-md-6" style="padding-top:2%;">
-                {{affiliate}}
+                <p>{{affiliate}}</p>
               </div>
-              <div class="col-md-6">
+              <div class="col-md-6" style="padding-top:3%;">
                 <input id="{{affiliate}}" class="school" type="checkbox" ng-click="toggleSchool(affiliate)" >
                 <label id="test" class="school__label" for="{{affiliate}}"></label>
               </div>
