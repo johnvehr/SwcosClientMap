@@ -14,7 +14,7 @@ angular.module('swcosClientMapApp')
     var local_env = 'http://localhost:9000/api/uploads';
     var prod_env = 'https://swcos-upload-engine.herokuapp.com/api/uploads';
 
-    $http.get(prod_env).success(function(sites){
+    $http.get(local_env).success(function(sites){
       console.log(angular.fromJson(sites))
       $scope.sites = angular.fromJson(sites)
       $scope.siteTotal = $scope.sites.length
@@ -44,8 +44,8 @@ angular.module('swcosClientMapApp')
       function buildSiteMarkers(i,site){
         var ret = {
           id: site.id,
-          //icon: '/images/swcos-marker.png',
-          icon: '/images/swcos-marker.9bdfd030.png',
+          icon: '/images/swcos-marker.png',
+          //icon: '/images/swcos-marker.9bdfd030.png',
           latitude: site.lat,
           longitude: site.lng,
           displaySiteData: function(){
@@ -141,8 +141,78 @@ angular.module('swcosClientMapApp')
   })
 
   .controller('SiteModalCtrl', function($scope,$modalInstance, site){
+
+    $scope.affiliateDetails = [
+      {
+        "Affiliate Name": "Promise Heights",
+        "Affiliate Description": "Promise Heights (PH), an initiative run out of the University of Maryland School of Social Work, aims to create a comprehensive child, family, and community-building model in the West Baltimore neighborhood of Upton/Druid Heights. This program provides children 0-21 with educational, social, physical, and economic opportunities that allow them to thrive and succeed in work and family life. It involves a partnership between the UMB School of Social Work, UMB School of Nursing, non-profit agencies, faith-based organizations, government, and communities in West Baltimore. The PH initiative is working in the Historic Samuel Coleridge-Taylor Elementary School, Furman L. Templeton Preparatory Academy, Booker T. Washington Middle School and Renaissance Academy High School.",
+        "Website": "http://promiseheights.net/",
+        "Contact Name": "Bronwyn Mayden",
+        "Contact Email": "BMAYDEN@ssw.umaryland.edu"
+      },
+      {
+        "Affiliate Name": "Child & Family Initiatives",
+        "Affiliate Description": "The university has several courses that allow our students to interact with children, parents, staff and community members in Baltimore City Public Schools. UMB students doing tutoring, health or dental education and outreach bring insights back to their classes including Introduction to Clinical Medicine, Community/Public Health Nursing, Mediation Clinic (Carey School of Law), Behavioral Dentistry and Advanced Field Placement (School of Social Work).",
+        "Website": "",
+        "Contact Name": "Lisa Rawlings",
+        "Contact Email": "Lisa Rawlings"
+      },
+      {
+        "Affiliate Name": "Seniors",
+        "Affiliate Description": "The university has a number of courses that allow our students to interact with seniors. UMB students doing health and dental education, advocacy and outreach bring what they learn back to their courses in our Physical Therapy program, Community/Public Health Nursing, Introduction to Clinical Medicine, Behavioral Dentistry and Advanced Field Placement (School of Social Work).",
+        "Website": "",
+        "Contact Name": "Lisa Rawlings",
+        "Contact Email": "Lisa Rawlings"
+      },
+      {
+        "Affiliate Name": "Immigrant Communities",
+        "Affiliate Description": "The university has a number of courses that allow our students to interact with members of the immigrant community. UMB students doing health education, tutoring, outreach and advocacy bring what they learn back to courses in our Immigration Clinic (Carey School of Law), Introduction to Clinical Medicine, Community/Public Health Nursing and Advanced Field Placement (School of Social Work).",
+        "Website": "",
+        "Contact Name": "Lisa Rawlings",
+        "Contact Email": "Lisa Rawlings"
+      },
+      {
+        "Affiliate Name": "Community Schools",
+        "Affiliate Description": "A community school is a place and a set of strategic partnerships among a school and other community resources that promote student achievement, positive conditions for learning and the well-being of families and communities.  Through the work of a community-based partner such as UMB, each Community School leverages unique community resources to meet community needs, and maintains a core focus on children, while recognizing that children grow up in families and that families are integral parts of communities.  This integrated approach leads to student success, strong families and health communities.",
+        "Website": "",
+        "Contact Name": "Becky Davis",
+        "Contact Email": "swcos@ssw.umaryland.edu"
+      },
+      {
+        "Affiliate Name": "SWCOS",
+        "Affiliate Description": "Social Work Community Outreach Service (SWCOS) prepares civic-minded social workers to serve in Baltimore’s communities and around the world. We provide our students with unique opportunities to work in communities, doing meaningful, innovative work; viewing individuals, families and communities through a social justice lens, whether the focus is clinical, policy, community organizing or program management.  SWCOS vision is that Baltimore and Maryland will become socially and economically more robust through sustained university-community partnerships that foster civic-minded leadership and innovative community-engaged education, service, and research.",
+        "Website": "http://um.umaryland.edu/swcos/",
+        "Contact Name": "Becky Davis",
+        "Contact Email": "swcos@ssw.umaryland.edu"
+      },
+      {
+        "Affiliate Name": "Family Stability",
+        "Affiliate Description": "Family Stability focuses on lifting families out of crisis and moving them to self-sufficiency through homelessness prevention, shelter diversion and financial education. Led by United Way of Central Maryland, Family Stability programs were seeded with a grant from the Siemer Institute for Family Stability and is made possible by generous donors.",
+        "Website": "www.uwcm.org/family",
+        "Contact Name": "Becky Davis",
+        "Contact Email": "swcos@ssw.umaryland.edu"
+      }
+    ]
+
     $scope.site = site;
     console.log(site)
+
+    var siteAffil_ = function(){
+      for(var key in site){
+        if(key == "SWCOS"){
+          if(site[key] == true){
+            $scope.affiliateDetails.map(function(affil){
+              if(affil['Affiliate Name'] == key){
+                $scope.site['Affiliate contact name'] = affil['Contact Name'];
+                $scope.site['Affiliate contact email'] = affil['Contact Email'];
+                console.log($scope.site['Affiliate contact name'])
+              }
+            })
+          }
+        }
+      }
+    }
+    siteAffil_();
 
     var dataFunc = function(ls,cat_){
       var siteDataArray = [],
@@ -191,6 +261,7 @@ angular.module('swcosClientMapApp')
       }
       $scope.dataOutLabels = dataFunc('l','students')
       console.log($scope.dataOutLabels)
+
       $scope.dataDiscipline = {
         //labels: dataFunc('l','discipline'),
         labels: ['','','',''],
@@ -218,7 +289,7 @@ angular.module('swcosClientMapApp')
     };
 
     $scope.lifeData = {
-      labels: ['Nation', 'State', 'Here'],
+      labels: ['Nation', 'State', 'This neighborhood'],
       series: [
       [78.7,79.7,73.4]
       //dataFunc('x','local')
@@ -226,14 +297,14 @@ angular.module('swcosClientMapApp')
     }//Life Expectancy
 
     $scope.incomeData = {
-      labels: ['Nation', 'State', 'Here'],
+      labels: ['Nation', 'State', 'This neighborhood'],
       series: [
       [60000,73000,64000]
       ]
     }//Household Income
 
     $scope.schoolData = {
-      labels: ['Nation','State','Here'],
+      labels: ['Nation','State','This neighborhood'],
       series: [
       [5, 4, 3],
       ]
