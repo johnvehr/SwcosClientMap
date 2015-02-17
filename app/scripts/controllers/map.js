@@ -39,7 +39,8 @@ angular.module('swcosClientMapApp')
       var toggle = 1,
       toggleData = [];
 
-      $scope.map = { center: { latitude: 39.2877623, longitude: -76.6185118 }, zoom: 12 };
+      $scope.map = { center: { latitude: 39.2877623, longitude: -76.6185118 }, zoom: 12, mapOptions: {scrollwheel: false}};
+     
 
       function buildSiteMarkers(i,site){
         var ret = {

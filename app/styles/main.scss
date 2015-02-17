@@ -20,6 +20,15 @@ $swcos_red: rgba(229, 25, 55,1);
   padding: 0.2em 0;
 }
 
+h2 {
+	background-color: $dark_grey;
+	text-align: center;
+	color: #fff;
+	font-size: 1.3em;
+	padding: 5px;
+	margin: 0px;
+}
+
 /* Space out content a bit */
 body {
   padding-top: 20px;
@@ -39,19 +48,7 @@ body.modal-open .supreme-container{
   box-shadow: inset 6px 6px 31px 0px rgba(135,135,135,0.71);
 }
 
-.header-container{
-  //ackground:rgba(163, 160, 99, 0.05);
-  text-align:center;
-  padding-top:10px;
-  padding-bottom:30px;
-  margin-bottom:25px;
-  border-radius:4px;
-}
-.header-container-inner{
-  margin:0 auto;
-  width:55%;
-  max-width:620px;
-}
+
 .page-header {
   width:100%;
   margin-top:20px;
@@ -60,11 +57,38 @@ body.modal-open .supreme-container{
 }
 .help-block{
   margin-top:0px;
+  margin-bottom: 0px;
+  text-align: center;
   width:100%;
+  background-color: $marker_;
+  color: #000;
+  font-style: italic;
+  padding: 5px;
+  
 }
-.well {
+.sponsor {
+	text-align: center;
+	font-style: italic;
+	padding: 15px;
+}
+.instructions {
+	text-align: center;
+	background-color: #ccc;
+	font-style: italic;
+	padding: 5px;
+}
+.container {
   background:url("/images/main-background-umb.png") center center repeat;
+  border-radius: 4px;
+  overflow:hidden;
+  border: 1px solid $dark_grey;
 }
+
+.colWrap {
+	border-radius:4px;
+	overflow:hidden;
+	}
+	
 .col-md-6 p {
   padding-left:10px;
 }
@@ -150,7 +174,7 @@ p > span {
   height: 832px;
   max-height:832px;
   border:1px solid #D8D6D6;
-  border-radius:4px;
+  
   }
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
