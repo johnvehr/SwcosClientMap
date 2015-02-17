@@ -259,9 +259,12 @@ angular.module('swcosClientMapApp')
         //labels: dataFunc('l','students'),
         labels: ['','','',''],
         series: dataFunc('s','students')
+        
       }
+      //console.log($scope.data)
+      
       $scope.dataOutLabels = dataFunc('l','students')
-      console.log($scope.dataOutLabels)
+      //console.log($scope.dataOutLabels)
 
       $scope.dataDiscipline = {
         //labels: dataFunc('l','discipline'),
