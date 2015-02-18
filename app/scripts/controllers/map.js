@@ -156,21 +156,21 @@ angular.module('swcosClientMapApp')
         "Affiliate Description": "The university has several courses that allow our students to interact with children, parents, staff and community members in Baltimore City Public Schools. UMB students doing tutoring, health or dental education and outreach bring insights back to their classes including Introduction to Clinical Medicine, Community/Public Health Nursing, Mediation Clinic (Carey School of Law), Behavioral Dentistry and Advanced Field Placement (School of Social Work).",
         "Website": "",
         "Contact Name": "Lisa Rawlings",
-        "Contact Email": "Lisa Rawlings"
+        "Contact Email": "lrawlings@umarland.edu"
       },
       {
         "Affiliate Name": "Seniors",
         "Affiliate Description": "The university has a number of courses that allow our students to interact with seniors. UMB students doing health and dental education, advocacy and outreach bring what they learn back to their courses in our Physical Therapy program, Community/Public Health Nursing, Introduction to Clinical Medicine, Behavioral Dentistry and Advanced Field Placement (School of Social Work).",
         "Website": "",
         "Contact Name": "Lisa Rawlings",
-        "Contact Email": "Lisa Rawlings"
+        "Contact Email": "lrawlings@umarland.edu"
       },
       {
         "Affiliate Name": "Immigrant Communities",
         "Affiliate Description": "The university has a number of courses that allow our students to interact with members of the immigrant community. UMB students doing health education, tutoring, outreach and advocacy bring what they learn back to courses in our Immigration Clinic (Carey School of Law), Introduction to Clinical Medicine, Community/Public Health Nursing and Advanced Field Placement (School of Social Work).",
         "Website": "",
         "Contact Name": "Lisa Rawlings",
-        "Contact Email": "Lisa Rawlings"
+        "Contact Email": "lrawlings@umarland.edu"
       },
       {
         "Affiliate Name": "Community Schools",
@@ -200,17 +200,13 @@ angular.module('swcosClientMapApp')
 
     var siteAffil_ = function(){
       for(var key in site){
-        if(key == "SWCOS"){
-          if(site[key] == true){
-            $scope.affiliateDetails.map(function(affil){
-              if(affil['Affiliate Name'] == key){
-                $scope.site['Affiliate contact name'] = affil['Contact Name'];
-                $scope.site['Affiliate contact email'] = affil['Contact Email'];
-                console.log($scope.site['Affiliate contact name'])
-              }
-            })
+        $scope.affiliateDetails.map(function(affil){
+          if(affil['Affiliate Name'] == key && site[key]){
+            $scope.site['Affiliate website'] = affil['Website'];
+            $scope.site['Affiliate contact name'] = affil['Contact Name'];
+            $scope.site['Affiliate contact email'] = affil['Contact Email'];
           }
-        }
+        })
       }
     }
     siteAffil_();
@@ -262,7 +258,7 @@ angular.module('swcosClientMapApp')
 
     if($scope.site){
       $scope.data = {
-        //labels: dataFunc('l','students'),
+        //labels: dataFunc('l','students'), if labels are ever desired
         labels: ['','','',''],
         series: dataFunc('s','students')
       }

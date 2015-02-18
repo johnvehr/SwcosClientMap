@@ -5,10 +5,14 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 @import "_chartist-settings.scss";
 @import "chartist/dist/scss/chartist.scss";
 //colors
+//Pie Chart By School
 $nursing: #00a9bc;
 $medicine: #e51837;
 $school: #8cc63f;
 $social_work: #ffcb00;
+//Pie Chart By Discipline
+//#037F3B #9E005D #F15A24 #0073BA
+
 $dark_grey: #1a1a1a;
 $marker_: #ffe202;
 $swcos_red: rgba(229, 25, 55,1);
