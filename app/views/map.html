@@ -10,9 +10,10 @@
         <div class="col-md-5">
           <h1>{{site.Site}}</h1>
           <h4>{{site.CSA}}</h4>
-          <p><strong>Affiliate Website: </strong><a ng-hide="!site['Affiliate website']" href="{{site['Affiliate website']}}" target="_blank">{{site['Affiliate website']}}</a></p>
-          <p><strong>Affiliate Contact Name: </strong>{{site['Affiliate contact name']}}</p>
-          <p><strong>Affiliate Contact Email: </strong>{{site['Affiliate contact email']}}</p>
+          <p><strong>Website: </strong><a ng-hide="!site.Website" href="{{site.Website}}" target="_blank">{{site.Website}}</a></p>
+          <p><strong>Contact Name: </strong>{{site.Contact}}</p>
+          <p><strong>Contact Email: </strong>{{site['Contact email']}}</p>
+          <p><strong>Contact Phone: </strong>{{site['Site Phone No.']}}</p>
           <p>{{site['Site Description']}}</p>
           <p ng-hide="site['Site Description']">No site description provided.</p>
           <h4>{{stud_sum}} University of Maryland Baltimore Student<span ng-hide="stud_sum == 1">s</span> Involved</h4>
