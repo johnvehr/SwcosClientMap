@@ -45,8 +45,8 @@ angular.module('swcosClientMapApp')
       function buildSiteMarkers(i,site){
         var ret = {
           id: site.id,
-          //icon: '/images/swcos-marker.png',
-          icon: '/images/swcos-marker.9bdfd030.png',
+          icon: '/images/swcos-marker.png',
+          //icon: '/images/swcos-marker.9bdfd030.png',
           latitude: site.lat,
           longitude: site.lng,
           displaySiteData: function(){
@@ -223,7 +223,9 @@ angular.module('swcosClientMapApp')
           if(cat_ === 'students'){
             if(
               key === 'Medicine' || key === 'Pharmacy' ||
-              key === 'Nursing' || key === 'Social Work'){
+              key === 'Nursing' || key === 'Social Work' ||
+              key === 'Law' || key === 'Dentistry'
+              ){
               siteData[key] = site[key]
             }
           }else{
@@ -244,10 +246,14 @@ angular.module('swcosClientMapApp')
           }
         }*/
       }
-
+      console.log(siteData)
       for(var k in siteData){
         if(parseInt(siteData[k]) > 0 && parseInt(siteData[k]) != NaN) {
-          var siteReturn = ls === 'l' ? siteDataArray.push(k) : siteDataArray.push(parseInt(siteData[k]))
+          if(ls === 'l_s'){
+            siteDataArray.push([k,siteData[k]])
+          }else{
+            var siteReturn = ls === 'l' ? siteDataArray.push(k) : siteDataArray.push(parseInt(siteData[k]))
+          }
         }
       }
 
@@ -259,19 +265,14 @@ angular.module('swcosClientMapApp')
         //labels: dataFunc('l','students'),
         labels: ['','','',''],
         series: dataFunc('s','students')
-
       }
-      //console.log($scope.data)
-
-      $scope.dataOutLabels = dataFunc('l','students')
-      //console.log($scope.dataOutLabels)
-
+      $scope.dataBySchool = dataFunc('l_s','students')
+      $scope.dataByDiscipline = dataFunc('l_s','discipline')
       $scope.dataDiscipline = {
         //labels: dataFunc('l','discipline'),
         labels: ['','','',''],
         series: dataFunc('s','discipline')
       }
-      $scope.dataDisciplineOutLabels = dataFunc('l','discipline')
     }
 
     var totalStudents = 0;

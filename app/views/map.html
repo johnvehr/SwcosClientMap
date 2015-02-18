@@ -20,40 +20,25 @@
             <div class="col-md-6">
               <chartist class="ct-chart ct-golden-section" chartist-data="data" chartist-chart-type="Pie"></chartist>
               <h4>By School</h4>
-              <ul class="list-group">
-                <li class="list-group-item" ng-repeat="label in dataOutLabels">
-                  <span class="badge" ng-repeat="key in data.series">{{key}}</span>
-                  {{label}}<!-- school-label -->
-
-
+              <ul class="list-group pieChart">
+                <li class="list-group-item" ng-repeat="label in dataBySchool">
+                  <span class="badge">{{label[1]}}</span>
+                    <span class="school-label"></span>{{label[0]}}
                 </li>
               </ul>
-
-  <!-- DR ideal of what this should look like --------------------------------------------------------------------------->
-              <h4>By School Ideal</h4>
-              <div class="row" ng-repeat="item in newScope">
-                <div class="col-sm-10">
-                  <span class="school-label"></span>{{label}}
-                </div>
-                <div class="col-sm-2">
-                  {{key}}
-                </div>
-              </div>
-  <!-- End DR ideal of what this should look like --------------------------------------------------------------------------->
 
             </div>
             <!-- right pie -->
             <div class="col-md-6">
               <chartist class="ct-chart ct-golden-section" chartist-data="dataDiscipline" chartist-chart-type="Pie"></chartist>
               <h4>By Discipline</h4>
-              <div class="row">
-                <div class="col-sm-11">
-                  <p ng-repeat="label in dataDisciplineOutLabels"><span class="school-label"></span>{{label}}{{key}}</p>
-                </div>
-                <div class="col-sm-1">
-                  <p ng-repeat="key in dataDiscipline.series">{{key}}</p>
-                </div>
-              </div>
+              <ul class="list-group pieChart">
+                <li class="list-group-item" ng-repeat="label in dataByDiscipline">
+                  <span class="badge">{{label[1]}}</span>
+                    <span class="school-label"></span>{{label[0]}}
+                </li>
+              </ul>
+
             </div>
           </div>
         </div>
