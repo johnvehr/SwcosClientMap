@@ -7,12 +7,15 @@
  * # MapCtrl
  * Controller of the swcosClientMapApp
  */
+ 
 angular.module('swcosClientMapApp')
   .controller('MapCtrl', function ($scope,$http,$modal,$location,$log) {
 
     //$scope.map = { center: { latitude: 39.2877623, longitude: -76.6185118 }, zoom: 12 };
     var local_env = 'http://localhost:9000/api/uploads';
     var prod_env = 'https://swcos-upload-engine.herokuapp.com/api/uploads';
+    
+
 
     $http.get(prod_env).success(function(sites){
       console.log(angular.fromJson(sites))
@@ -45,8 +48,8 @@ angular.module('swcosClientMapApp')
       function buildSiteMarkers(i,site){
         var ret = {
           id: site.id,
-          icon: '/images/swcos-marker.png',
-          //icon: '/images/swcos-marker.9bdfd030.png',
+          //icon: '/images/swcos-marker.png',
+          icon: 'http://localhost:8000/images/swcos-marker.png',
           latitude: site.lat,
           longitude: site.lng,
           displaySiteData: function(){

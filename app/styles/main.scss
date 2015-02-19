@@ -1,8 +1,14 @@
 $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
+
+//@import "reset.scss";
+
+
 // bower:scss
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+
 // endbower
 @import "_chartist-settings.scss";
+
 @import "chartist/dist/scss/chartist.scss";
 //colors
 //Pie Chart By School
@@ -34,11 +40,7 @@ h2 {
 	margin: 0px;
 }
 
-/* Space out content a bit */
-body {
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
+
 
 body.modal-open .supreme-container{
   -o-filter: blur(15px);

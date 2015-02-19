@@ -13,21 +13,27 @@ angular
     'ngAnimate',
     'ngCookies',
     'ngResource',
-    'ngRoute',
+    //'ngRoute',
     'ngSanitize',
     'ngTouch',
     'uiGmapgoogle-maps',
     'ui.bootstrap',
-    'ui.router',
+    //'ui.router',
     'angular-chartist'
   ])
-  .config(function ($routeProvider) {
-    $routeProvider
-      .when('/', {
-        templateUrl: 'views/map.html',
-        controller: 'MapCtrl'
-      })
-      .otherwise({
-        redirectTo: '/'
-      });
-  });
+
+  
+  .config(['$httpProvider', function($httpProvider) {
+        $httpProvider.defaults.useXDomain = true;
+        delete $httpProvider.defaults.headers.common['X-Requested-With'];
+    }
+])
+  
+  .config(function($sceDelegateProvider) {
+  $sceDelegateProvider.resourceUrlWhitelist([
+    // Allow same origin resource loads.
+    'self',
+    // Allow loading from our assets domain.  Notice the difference between * and **.
+    'http://localhost:8000/views/map.html'
+  ]);
+});
