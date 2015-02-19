@@ -12,12 +12,16 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 @import "chartist/dist/scss/chartist.scss";
 //colors
 //Pie Chart By School
-$nursing: #00a9bc;
-$medicine: #e51837;
-$school: #8cc63f;
-$social_work: #ffcb00;
+$BySchoolA: #e51837;
+$BySchoolB: #00a9bc;
+$BySchoolC: #ffcb00;
+$BySchoolD: #8cc63f;
 //Pie Chart By Discipline
-//#037F3B #9E005D #F15A24 #0073BA
+$ByDisciplineA: #037F3B;
+$ByDisciplineB: #9E005D;
+$ByDisciplineC: #F15A24;
+$ByDisciplineD: #0073BA;
+
 
 $dark_grey: #1a1a1a;
 $marker_: #ffe202;
@@ -104,7 +108,7 @@ body.modal-open .supreme-container{
 }
 p > span {
   display:inline-block;
-  width:5em;
+  /*width:5em;
   height:5px;
   border-top:1px solid #737373;
   &:first-child {
@@ -115,7 +119,7 @@ p > span {
   }
   &:nth-child(3){
     background-color:$social_work;
-  }
+  }*/
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -350,24 +354,40 @@ p > span {
       background:none;
       color:$modal_body;
     }
+    &:nth-child(1) .school-label{
+      background-color:$BySchoolA;
+    }
+    &:nth-child(2) .school-label{
+      background-color:$BySchoolB;
+    }
+    &:nth-child(3) .school-label{
+      background-color:$BySchoolC;
+    }
+  }
+  .list-group-item.disc {
+    &:nth-child(1) .school-label{
+      display:inline-block;
+      background-color:$ByDisciplineA;
+    }
+    &:nth-child(2) .school-label{
+      display:inline-block;
+      background-color:$ByDisciplineB;
+    }
+    &:nth-child(3) .school-label{
+      display:inline-block;
+      background-color:$ByDisciplineC;
+    }
   }
 
 }
 .school-label{
   margin:-4px;
+  margin-right:4px;
   width:20px;
   height:20px;
   border:none;
 }
-p:nth-child(1) .school-label{
-  background-color:$medicine;
-}
-p:nth-child(2) .school-label{
-  background-color:$nursing;
-}
-p:nth-child(3) .school-label{
-  background-color:$social_work;
-}
+
 
 
 .no-student-data {

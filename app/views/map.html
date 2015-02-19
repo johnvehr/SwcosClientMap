@@ -10,10 +10,10 @@
         <div class="col-md-5">
           <h1>{{site.Site}}</h1>
           <h4>{{site.CSA}}</h4>
-          <p><strong>Website: </strong><a ng-hide="!site.Website" href="{{site.Website}}" target="_blank">{{site.Website}}</a></p>
+          <p><strong>Website: </strong><a ng-hide="!site.Website" href="{{site.Website}}" target="_blank">{{site.Website}}</a><span ng-show="!site.Website">N/A</span></p>
           <p><strong>Contact Name: </strong>{{site.Contact}}</p>
-          <p><strong>Contact Email: </strong>{{site['Contact email']}}</p>
-          <p><strong>Contact Phone: </strong>{{site['Site Phone No.']}}</p>
+          <p><strong>Contact Email: </strong>{{site['Contact email']}}<span ng-show="!site['Contact email']">N/A</span></p>
+          <p><strong>Contact Phone: </strong>{{site['Site Phone No.']}}<span ng-show="!site['Site Phone No.']">N/A</span></p>
           <p>{{site['Site Description']}}</p>
           <p ng-hide="site['Site Description']">No site description provided.</p>
           <h4>{{stud_sum}} University of Maryland Baltimore Student<span ng-hide="stud_sum == 1">s</span> Involved</h4>
@@ -25,7 +25,7 @@
               <ul class="list-group pieChart">
                 <li class="list-group-item" ng-repeat="label in dataBySchool">
                   <span class="badge">{{label[1]}}</span>
-                    <span class="school-label"></span>{{label[0]}}
+                    <p><span class="school-label"></span>{{label[0]}}</p>
                 </li>
               </ul>
 
@@ -35,9 +35,9 @@
               <chartist class="ct-chart ct-golden-section" chartist-data="dataDiscipline" chartist-chart-type="Pie"></chartist>
               <h4>By Discipline</h4>
               <ul class="list-group pieChart">
-                <li class="list-group-item" ng-repeat="label in dataByDiscipline">
+                <li class="list-group-item disc" ng-repeat="label in dataByDiscipline">
                   <span class="badge">{{label[1]}}</span>
-                    <span class="school-label"></span>{{label[0]}}
+                    <p><span class="school-label"></span>{{label[0]}}</p>
                 </li>
               </ul>
 

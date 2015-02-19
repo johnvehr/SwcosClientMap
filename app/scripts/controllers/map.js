@@ -558,6 +558,7 @@ angular.module('swcosClientMapApp')
                 csaData = {};
 
       for(var key in site){
+        //REFACTOR THIS MESS
         if(cat_ === 'students' || cat_ === 'discipline'){
           if(cat_ === 'students'){
             if(
