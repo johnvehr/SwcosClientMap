@@ -2791,6 +2791,12 @@ button.close {
     width: 900px;
   }
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/main\.scss}line{font-family:\0000327}}
+.UMBmapApplication .block ul {
+  padding-left: 0px;
+  margin-top: 0px;
+}
+
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/bower_components\/chartist\/dist\/scss\/chartist\.scss}line{font-family:\0000390}}
 .ct-chart .ct-label {
   display: block;
@@ -3790,28 +3796,33 @@ body.modal-open .supreme-container {
   padding-top: 30%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/main\.scss}line{font-family:\0000364}}
-.container {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/main\.scss}line{font-family:\0000372}}
+.containerMappingApp {
   background: url("http://134.192.116.210/node/SwcosClientMap/app/images/main-background-umb.png") center center repeat;
   border-radius: 4px;
   overflow: hidden;
   border: 1px solid #1a1a1a;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/main\.scss}line{font-family:\0000372}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/main\.scss}line{font-family:\0000380}}
 .colWrap {
   border-radius: 4px;
   overflow: hidden;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/main\.scss}line{font-family:\0000383}}
+.colWrap .list-group-item:first-child {
+  border-top-right-radius: 0px;
+  border-top-left-radius: 0px;
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/main\.scss}line{font-family:\0000377}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/main\.scss}line{font-family:\0000389}}
 .angular-google-map-container {
   height: 832px;
   max-height: 832px;
   border: 1px solid #D8D6D6;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/main\.scss}line{font-family:\0000384}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/main\.scss}line{font-family:\0000396}}
 .list-group-item {
   padding: 10px 5px;
   padding-bottom: 0px !important;

@@ -22,6 +22,14 @@
 // Components w/ JavaScript
 @import "bootstrap-sass-official/assets/stylesheets/bootstrap/modals";
 
+// reset for drupal block view
+.UMBmapApplication {
+	.block ul {
+		padding-left: 0px;
+		margin-top:0px;
+	}
+	
+}
 
 @import "chartist/dist/scss/chartist.scss";
 //colors
@@ -61,7 +69,7 @@ $modal_body: #4f4f4f;
 
 
 //main container for front end
-.container {
+.containerMappingApp {
   background:url("http://134.192.116.210/node/SwcosClientMap/app/images/main-background-umb.png") center center repeat;
   border-radius: 4px;
   overflow:hidden;
@@ -72,6 +80,10 @@ $modal_body: #4f4f4f;
 .colWrap {
 	border-radius:4px;
 	overflow:hidden;
+	.list-group-item:first-child{
+		border-top-right-radius: 0px;
+		border-top-left-radius: 0px;
+	}
 	}
 
 .angular-google-map-container {
