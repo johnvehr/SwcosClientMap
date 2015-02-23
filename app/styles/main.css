@@ -2792,7 +2792,7 @@ button.close {
   }
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/main\.scss}line{font-family:\0000327}}
-.UMBmapApplication .block ul, .UMBmapApplication ul.listgroup {
+.UMBmapApplication .block ul, .UMBmapApplication ul.listgroup, .UMBmapApplication ul#schoolsList, .UMBmapApplication ul#affilsList {
   padding-left: 0px !important;
   margin-top: 0px !important;
 }

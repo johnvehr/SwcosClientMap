@@ -24,7 +24,7 @@
 
 // reset for drupal block view
 .UMBmapApplication {
-	.block ul, ul.listgroup {
+	.block ul, ul.listgroup, ul#schoolsList, ul#affilsList {
 		padding-left: 0px !important;
 		margin-top:0px !important;
 	}
