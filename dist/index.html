@@ -1,21 +1,4 @@
-<!doctype html>
-<html class="no-js">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width">
-    
-  </head>
-  <body>
-  
-<!-- Begin UMB Student Mapping Application ------------------------------------------------------------>
-  <link rel="stylesheet" href="http://134.192.116.210/node/SwcosClientMap/bower_components/chartist/dist/chartist.min.css" />
-  <link rel="stylesheet" href="http://134.192.116.210/node/SwcosClientMap/app/styles/main.css">
-<div ng-view="main" class="UMBmapApplication supreme-container " ng-controller="MapCtrl" ng-app="swcosClientMapApp">
-<!-- MODAL -->
-<script type="text/ng-template" id="displaySiteData.html">
-<div class="modal-body UMBmapApplicationModal">
+<!doctype html> <html class="no-js"> <head> <meta charset="utf-8"> <title></title> <meta name="description" content=""> <meta name="viewport" content="width=device-width"> <!-- Place favicon.ico and apple-touch-icon.png in the root directory --> <link rel="stylesheet" href="styles/vendor.51d5e611.css"> <link rel="stylesheet" href="styles/main.css">  <body> <div ng-view="main" class="UMBmapApplication supreme-container" ng-controller="MapCtrl" ng-app="swcosClientMapApp"> <!-- MODAL --> <script type="text/ng-template" id="displaySiteData.html"><div class="modal-body UMBmapApplicationModal">
   <div class="row">
   <button class="btn btn-default swcos-close" ng-click="ok()">x</button>
     <div class="col-md-12">
@@ -124,97 +107,12 @@
     </div>
 
   </div>
-</div>
-</script>
-<!-- END MODAL -->
+</div></script> <!-- END MODAL --> <!-- MAP --> <div class="container"> <div class="row"> <h2>University of Maryland Baltimore: Students Working in Baltimore</h2> </div> <div class="row"> <p class="sponsor">Interactive Map provided in thanks to a generous grant from the Joseph and Harvey Meyerhoff Family Charitable Funds and the Social Work Community Outreach Service (SWCOS)</p> <div class="col-md-9"> <div class="colWrap"> <div class="instructions">Click on a yellow marker within the map to display information about individual Sites</div> <ui-gmap-google-map center="map.center" zoom="map.zoom" options="map.mapOptions"> <ui-gmap-markers models="siteMarkers" click="'displaySiteData'" coords="'self'" icon="'icon'"> </ui-gmap-markers> </ui-gmap-google-map> </div> </div> <div class="col-md-3 col-sm-6"> <div class="colWrap"> <p class="filter-title">Filter By School</p> <ul class="list-group"> <li class="list-group-item" ng-repeat="school in siteSchools"> <div class="row"> <div class="col-md-6" style="padding-top:2%"> <p>{{school}}</p><p> </p></div> <div class="col-md-6"> <input id="{{school}}" class="school" type="checkbox" ng-click="toggleSchool(school)"> <label class="school__label" for="{{school}}"></label> </div> </div> </li> </ul> </div> <div class="colWrap"> <p class="filter-title">Filter By Affiliate</p> <ul class="list-group"> <li class="list-group-item" ng-repeat="affiliate in siteAffiliates"> <div class="row"> <div class="col-md-6" style="padding-top:2%"> <p>{{affiliate}}</p> </div> <div class="col-md-6" style="padding-top:3%"> <input id="{{affiliate}}" class="school" type="checkbox" ng-click="toggleSchool(affiliate)"> <label id="test" class="school__label" for="{{affiliate}}"></label> </div> </div> </li> </ul> </div> </div> </div> </div> </div> <!-- Google Analytics: changeX to be your site's ID --> <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-<!-- MAP -->
-<div class="container">
-	<div class="row">
-	<h2>University of Maryland Baltimore: Students Working in Baltimore</h2>
-	</div>
-  <div class="row">
-	  
-        <p class="sponsor">Interactive Map provided in thanks to a generous grant from the
-        Joseph and Harvey Meyerhoff Family Charitable Funds and the Social Work Community Outreach Service (SWCOS)</p>
-
-    <div class="col-md-9">
-	  <div class="colWrap">
-      <div class="instructions">Click on a yellow marker within the map to display information about individual Sites</div>
-
-      <ui-gmap-google-map center='map.center' zoom='map.zoom' options="map.mapOptions">
-
-        <ui-gmap-markers models="siteMarkers" click="'displaySiteData'" coords="'self'" icon="'icon'">
-        </ui-gmap-markers>
-
-      </ui-gmap-google-map>
-    </div>
-    </div>
-
-    <div class="col-md-3 col-sm-6">
-	    <div class="colWrap">
-      <p class="filter-title">Filter By School</p>
-      <ul class="list-group">
-        <li class="list-group-item" ng-repeat="school in siteSchools">
-          <div class="row">
-            <div class="col-md-6" style="padding-top:2%;">
-              <p>{{school}}<p>
-            </div>
-            <div class="col-md-6">
-              <input id="{{school}}" class="school" type="checkbox" ng-click="toggleSchool(school)">
-              <label class="school__label" for="{{school}}"></label>
-            </div>
-          </div>
-        </li>
-      </ul>
-      </div>
-
-	  	<div class="colWrap">
-        <p class="filter-title">Filter By Affiliate</p>
-        <ul class="list-group">
-          <li class="list-group-item" ng-repeat="affiliate in siteAffiliates">
-            <div class="row">
-              <div class="col-md-6" style="padding-top:2%;">
-                <p>{{affiliate}}</p>
-              </div>
-              <div class="col-md-6" style="padding-top:3%;">
-                <input id="{{affiliate}}" class="school" type="checkbox" ng-click="toggleSchool(affiliate)" >
-                <label id="test" class="school__label" for="{{affiliate}}"></label>
-              </div>
-            </div>
-          </li>
-        </ul>
-	  	</div>
-      </div>
-  </div>
-</div>
-
-      </div>
-
-
-
-    <script src='//maps.googleapis.com/maps/api/js?sensor=false'></script>
-    <!--[if lt IE 9]>
-    <script src="http://134.192.116.210/node/SwcosClientMap/bower_components/es5-shim/es5-shim.js"></script>
-    <script src="http://134.192.116.210/node/SwcosClientMap/bower_components/json3/lib/json3.js"></script>
-    <![endif]-->
-    <script src="http://134.192.116.210/node/SwcosClientMap/bower_components/jquery/dist/jquery.js"></script>
-    <script src="http://134.192.116.210/node/SwcosClientMap/bower_components/angular/angular.js"></script>
-    <script src="http://134.192.116.210/node/SwcosClientMap/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js"></script>
-    <script src="http://134.192.116.210/node/SwcosClientMap/bower_components/angular-animate/angular-animate.js"></script>
-    <script src="http://134.192.116.210/node/SwcosClientMap/bower_components/angular-cookies/angular-cookies.js"></script>
-    <script src="http://134.192.116.210/node/SwcosClientMap/bower_components/angular-resource/angular-resource.js"></script>
-    <script src="http://134.192.116.210/node/SwcosClientMap/bower_components/angular-sanitize/angular-sanitize.js"></script>
-    <script src="http://134.192.116.210/node/SwcosClientMap/bower_components/angular-touch/angular-touch.js"></script>
-    <script src="http://134.192.116.210/node/SwcosClientMap/bower_components/lodash/dist/lodash.compat.js"></script>
-    <script src="http://134.192.116.210/node/SwcosClientMap/bower_components/angular-google-maps/dist/angular-google-maps.js"></script>
-    <script src="http://134.192.116.210/node/SwcosClientMap/bower_components/chartist/dist/chartist.min.js"></script>
-    <script src="http://134.192.116.210/node/SwcosClientMap/bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
-    <script src="http://134.192.116.210/node/SwcosClientMap/bower_components/angular-chartist.js/dist/angular-chartist.js"></script>
-    <script src="http://134.192.116.210/node/SwcosClientMap/app/scripts/app.js"></script>
-    <script src="http://134.192.116.210/node/SwcosClientMap/app/scripts/controllers/map.js"></script>
-    <script src="http://134.192.116.210/node/SwcosClientMap/app/scripts/services/map.js"></script>
-<!-- endbuild --------------------------------------------------------------------------------------------------------------->
-
-</body>
-</html>
+       ga('create', 'UA-XXXXX-X');
+       ga('send', 'pageview');</script> <script src="//maps.googleapis.com/maps/api/js?sensor=false"></script> <!--[if lt IE 9]>
+    <script src="scripts/oldieshim.c17b592e.js"></script>
+    <![endif]--> <script src="scripts/vendor.a29303e9.js"></script> <script src="scripts/scripts.69247565.js"></script>  
