@@ -1,0 +1,49 @@
+// Modals
+
+//modal background
+body.modal-open .supreme-container{
+  -o-filter: blur(15px);
+  -ms-filter: blur(15px);
+  filter: blur(15px);
+  filter: url("data:image/svg+xml;utf9,<svg%20version='1.1'%20xmlns='http://www.w3.org/2000/svg'><filter%20id='blur'><feGaussianBlur%20stdDeviation='10'%20/></filter></svg>#blur");
+  filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='10');
+  -webkit-filter: blur(15px);
+  -webkit-box-shadow: inset 6px 6px 31px 0px rgba(135,135,135,0.71);
+  -moz-box-shadow: inset 6px 6px 31px 0px rgba(135,135,135,0.71);
+  box-shadow: inset 6px 6px 31px 0px rgba(135,135,135,0.71);
+}
+
+.modal-dialog {
+  width:75%;
+}
+
+.modal-body{
+  color:$UMBltGrey;
+  .row {
+    h1{
+      text-transform:uppercase;
+      font-size:20px;
+    }
+  }
+}
+// modal close btn
+.swcos-close{
+  float:right;
+  text-transform:uppercase;
+  color:$UMBwhite;
+  background:$UMBgold;
+  border:none;
+  }
+
+.modal-backdrop {
+  background:$UMBwhite;
+}
+.modal{
+  background:rgba(252, 252, 252, 0.4);
+}
+.modal-content{
+  background:rgba(252, 252, 252, 0);
+  border:none;
+  box-shadow:none;
+}
+// End Modal

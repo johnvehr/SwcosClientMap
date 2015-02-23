@@ -1,396 +1,71 @@
 $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
-
 //@import "reset.scss";
-
 
 // bower:scss
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
-
 // endbower
-@import "_chartist-settings.scss";
+
 
 @import "chartist/dist/scss/chartist.scss";
 //colors
+
+// Chart colors 1-5. More can be added, but will need to add selectors in pie chart section of this file
 //Pie Chart By School
 $BySchoolA: #e51837;
 $BySchoolB: #00a9bc;
 $BySchoolC: #ffcb00;
 $BySchoolD: #8cc63f;
+$BySchoolE: #4f4f4f;
 //Pie Chart By Discipline
 $ByDisciplineA: #037F3B;
 $ByDisciplineB: #9E005D;
 $ByDisciplineC: #F15A24;
 $ByDisciplineD: #0073BA;
+$ByDisciplineE: #4f4f4f;
+// Bar chart colors
+$UMBmodalBarA: rgba(26, 26, 26, 0.99) ;
+$UMBmodalBarB: rgba(26, 26, 26, 0.85) ;
+$UMBmodalBarC: rgba(26, 26, 26, 0.65) ;
 
-
-$dark_grey: #1a1a1a;
-$marker_: #ffe202;
-$swcos_red: rgba(229, 25, 55,1);
+// General colors
+$UMBblack: #000;
+$UMBwhite: #fff;
+$UMBdkGrey: #1a1a1a;
+$UMBltGrey: #4f4f4f;
+$UMBgold: #ffe202;
+$UMBred: rgba(229, 25, 55,1);
 $modal_body: #4f4f4f;
 
-.browsehappy {
-  margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
-  padding: 0.2em 0;
-}
-
-h2 {
-	background-color: $dark_grey;
-	text-align: center;
-	color: #fff;
-	font-size: 1.3em;
-	padding: 5px;
-	margin: 0px;
-}
+@import "_chartist-settings.scss";
+@import "type.scss";
+@import "modal.scss";
+@import "filters.scss";
+@import "charts.scss";
 
 
-
-body.modal-open .supreme-container{
-  -o-filter: blur(15px);
-  -ms-filter: blur(15px);
-  filter: blur(15px);
-  filter: url("data:image/svg+xml;utf9,<svg%20version='1.1'%20xmlns='http://www.w3.org/2000/svg'><filter%20id='blur'><feGaussianBlur%20stdDeviation='10'%20/></filter></svg>#blur");
-  filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='10');
-  -webkit-filter: blur(15px);
-
-  -webkit-box-shadow: inset 6px 6px 31px 0px rgba(135,135,135,0.71);
-  -moz-box-shadow: inset 6px 6px 31px 0px rgba(135,135,135,0.71);
-  box-shadow: inset 6px 6px 31px 0px rgba(135,135,135,0.71);
-}
-
-
-.page-header {
-  width:100%;
-  margin-top:20px;
-  margin-bottom:10px;
-  padding-bottom:0px;
-}
-.help-block{
-  margin-top:0px;
-  margin-bottom: 0px;
-  text-align: center;
-  width:100%;
-  background-color: $marker_;
-  color: #000;
-  font-style: italic;
-  padding: 5px;
-
-}
-.sponsor {
-	text-align: center;
-	font-style: italic;
-	padding: 15px;
-}
-.instructions {
-	text-align: center;
-	background-color: #ccc;
-	font-style: italic;
-	padding: 5px;
-}
+//main container for front end
 .container {
   background:url("/images/main-background-umb.png") center center repeat;
   border-radius: 4px;
   overflow:hidden;
-  border: 1px solid $dark_grey;
+  border: 1px solid $UMBdkGrey;
 }
 
+// wrapper for that fresh, rounded borders look
 .colWrap {
 	border-radius:4px;
 	overflow:hidden;
 	}
 
-.col-md-6 p {
-  padding-left:10px;
-}
-.ackTitle {
-  text-align:center;
-}
-p > span {
-  display:inline-block;
-  /*width:5em;
-  height:5px;
-  border-top:1px solid #737373;
-  &:first-child {
-    margin-right:5px;
-  }
-  &:last-child{
-    margin-left:5px;
-  }
-  &:nth-child(3){
-    background-color:$social_work;
-  }*/
-}
-
-/* Everything but the jumbotron gets side spacing for mobile first views */
-.header,
-.marketing,
-.footer {
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-/* Custom page header */
-.header {
-  border-bottom: 1px solid #e5e5e5;
-
-  /* Make the masthead heading the same height as the navigation */
-  h3 {
-    margin-top: 0;
-    margin-bottom: 0;
-    line-height: 40px;
-    padding-bottom: 19px;
-  }
-}
-
-/* Custom page footer */
-.footer {
-  padding-top: 19px;
-  color: #777;
-  border-top: 1px solid #e5e5e5;
-}
-
-.container-narrow > hr {
-  margin: 30px 0;
-}
-
-/* Main marketing message and sign up button */
-.jumbotron {
-  text-align: center;
-  border-bottom: 1px solid #e5e5e5;
-
-  .btn {
-    font-size: 21px;
-    padding: 14px 24px;
-  }
-}
-
-/* Supporting marketing content */
-.marketing {
-  margin: 40px 0;
-
-  p + h4 {
-    margin-top: 28px;
-  }
-}
-/*.gm-style {
-  width:815px !important;
-  height:700px !important;
-}*/
-.glyphicon-info-sign{
-  font-size:1.7em;
-  color:$marker_;
-}
 .angular-google-map-container {
   height: 832px;
   max-height:832px;
   border:1px solid #D8D6D6;
 
   }
-/* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
-  .container {
-  //  max-width: 730px;
-  }
-
-  /* Remove the padding we set earlier */
-  .header,
-  .marketing,
-  .footer {
-    padding-left: 0;
-    padding-right: 0;
-  }
-  /* Space out the masthead */
-  .header {
-    margin-bottom: 30px;
-  }
-  /* Remove the bottom border on the jumbotron for visual effect */
-  .jumbotron {
-    border-bottom: 0;
-  }
-}
 
 .list-group-item {
   padding:10px 5px;
   padding-bottom:0px !important;
-
 }
 
-.school{
-  visibility: hidden;
-}
-// background shape
-.school__label {
-  background-color: rgba(26, 26, 26, 0);
-  padding: 9px;
-  border-radius: 70px;
-  display: inline-block;
-  position: relative;
-  margin-right: 10px;
-  width: 58px;
-  height: 30px;
-}
-
-// background color
-.school__label:after {
-  content: '';
-  position: absolute;
-  background: lightgray;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 70px;
-}
-
-
-.school:checked + .school__label:after {
-  content: '';
-  //background: $social_work;
-  background: $marker_;
-}
-.school:checked + .school__label[id="test"]:after {
-  content: '';
-  background: #00a9bc;
-}
-
-.school__label:before {
-  content: '';
-  position: absolute;
-  background: white;
-  top: 2px;
-  left: 2px;
-  z-index: 2;
-  width: 25px;
-  height: 25px;
-  border-radius: 100px;
-}
-
-.school:checked + .school__label:before {
-  left: 31px;
-}
-
-.school__label:after,.school__label:before {
-  -webkit-transition: background 0.2s ease-out, left 0.2s ease-out;
-  -moz-transition: background 0.2s ease-out, left 0.2s ease-out;
-}
-
-.modal-dialog {
-  width:75%;
-}
-
-.modal-body{
-  color:#4f4f4f;
-  .row {
-    h1{
-      text-transform:uppercase;
-      font-size:20px;
-    }
-  }
-}
-
-.swcos-close{
-  float:right;
-  text-transform:uppercase;
-  color:#fff;
-  background:#ffcd00;
-  border:none;
-  }
-
-.modal-backdrop {
-  background:#FFF;
-}
-.modal{
-  background:rgba(252, 252, 252, 0.4);
-}
-.modal-content{
-  background:rgba(252, 252, 252, 0);
-  border:none;
-  box-shadow:none;
-}
-.bar-wrapper{
-  padding: 10px;
-  border-top: 1px solid rgba(51, 51, 51, 0.2);
-  border-left: 1px solid rgba(51, 51, 51, 0.2);
-  border-right:1px solid rgba(51, 51, 51, 0.2);
-  h4{
-    margin-top:0px;
-  }
-}
-.bw-last{
-  border-bottom:1px solid rgba(51, 51, 51, 0.2);
-}
-
-.ct-label.ct-horizontal {
-  text-align:center !important;
-}
-.ct-label{
-  font-size:1.2rem !important;
-}
-.bars {
-  text-align:center;
-}.bar-sec {
-  padding-top:10px;
-  border-top:1px solid lightgray;
-  border-left:1px solid lightgray;
-}
-.ct-bar {
-  stroke:#1a1a1a !important;
-  stroke-width:23px !important;
-  &:nth-child(2){
-    stroke:rgba(26, 26, 26, 0.85) !important;
-  }
-  &:nth-child(3){
-    stroke:rgba(26, 26, 26, 0.65) !important;
-  }
-}.ct-label {
-  display:none;
-}
-.pieChart {
-  .list-group-item {
-    background:none;
-    border:none;
-    .badge{
-      background:none;
-      color:$modal_body;
-    }
-    &:nth-child(1) .school-label{
-      background-color:$BySchoolA;
-    }
-    &:nth-child(2) .school-label{
-      background-color:$BySchoolB;
-    }
-    &:nth-child(3) .school-label{
-      background-color:$BySchoolC;
-    }
-  }
-  .list-group-item.disc {
-    &:nth-child(1) .school-label{
-      display:inline-block;
-      background-color:$ByDisciplineA;
-    }
-    &:nth-child(2) .school-label{
-      display:inline-block;
-      background-color:$ByDisciplineB;
-    }
-    &:nth-child(3) .school-label{
-      display:inline-block;
-      background-color:$ByDisciplineC;
-    }
-  }
-
-}
-.school-label{
-  margin:-4px;
-  margin-right:4px;
-  width:20px;
-  height:20px;
-  border:none;
-}
-
-
-
-.no-student-data {
-  display:inherit;
-  padding-top:30%;
-}

@@ -1,0 +1,144 @@
+
+// Modal bar charts
+.bar-wrapper{
+  padding: 10px;
+  border-top: 1px solid rgba(51, 51, 51, 0.2);
+  border-left: 1px solid rgba(51, 51, 51, 0.2);
+  border-right:1px solid rgba(51, 51, 51, 0.2);
+  h4{
+    margin-top:0px;
+  }
+}
+.bw-last{
+  border-bottom:1px solid rgba(51, 51, 51, 0.2);
+}
+
+.ct-label.ct-horizontal {
+  text-align:center !important;
+}
+.ct-label{
+  font-size:1.2rem !important;
+}
+.bars {
+  text-align:center;
+}.bar-sec {
+  padding-top:10px;
+  border-top:1px solid lightgray;
+  border-left:1px solid lightgray;
+}
+
+// Bar colors
+.ct-bar {
+// color 1
+  stroke:$UMBmodalBarA !important;
+  stroke-width:23px !important;
+  // color 2
+  &:nth-child(2){
+    stroke:$UMBmodalBarB !important;
+  }
+  // color 3
+  &:nth-child(3){
+    stroke:$UMBmodalBarC !important;
+  }
+}.ct-label {
+  display:none;
+}
+
+// Pie Charts ----------------------------------------------
+.pieChart {
+  .list-group-item {
+    background:none;
+    border:none;
+
+    .badge{
+      background:none;
+      color:$UMBwhite;
+    }
+    &:nth-child(1) .badge{
+      background-color:$BySchoolA;
+    }
+    &:nth-child(2) .badge{
+      background-color:$BySchoolB;
+    }
+    &:nth-child(3) .badge{
+      background-color:$BySchoolC;
+    }
+    &:nth-child(4) .badge{
+      background-color:$BySchoolD;
+    }
+    &:nth-child(5) .badge{
+      background-color:$BySchoolE;
+    }
+  }
+
+  .list-group-item.disc {
+
+    &:nth-child(1) .badge{
+      background-color:$ByDisciplineA;
+    }
+    &:nth-child(2) .badge{
+      background-color:$ByDisciplineB;
+    }
+    &:nth-child(3) .badge{
+      background-color:$ByDisciplineC;
+    }
+    &:nth-child(4) .badge{
+      background-color:$ByDisciplineD;
+    }
+    &:nth-child(5) .badge{
+      background-color:$ByDisciplineE;
+    }
+  }
+
+}
+// quick color change for schools. 
+.schools {
+.ct-chart .ct-series.ct-series-a .ct-slice:not(.ct-donut) {
+  fill: $BySchoolA;
+}
+.ct-chart .ct-series.ct-series-b .ct-slice:not(.ct-donut) {
+  fill: $BySchoolB;
+}
+.ct-chart .ct-series.ct-series-c .ct-slice:not(.ct-donut) {
+  fill: $BySchoolC;
+}
+.ct-chart .ct-series.ct-series-d .ct-slice:not(.ct-donut) {
+  fill: $BySchoolD;
+}
+.ct-chart .ct-series.ct-series-e .ct-slice:not(.ct-donut) {
+  fill: $BySchoolE;
+}
+}
+
+// quick color change for disciplines. 
+.discipline {
+.ct-chart .ct-series.ct-series-a .ct-slice:not(.ct-donut) {
+  fill: $ByDisciplineA;
+}
+.ct-chart .ct-series.ct-series-b .ct-slice:not(.ct-donut) {
+  fill: $ByDisciplineB;
+}
+.ct-chart .ct-series.ct-series-c .ct-slice:not(.ct-donut) {
+  fill: $ByDisciplineC;
+}
+.ct-chart .ct-series.ct-series-d .ct-slice:not(.ct-donut) {
+  fill: $ByDisciplineD;
+}
+.ct-chart .ct-series.ct-series-e .ct-slice:not(.ct-donut) {
+  fill: $ByDisciplineE;
+}
+}
+
+.school-label{
+  margin:-4px;
+  margin-right:4px;
+  width:20px;
+  height:20px;
+  border:none;
+}
+
+.no-student-data {
+  display:inherit;
+  padding-top:30%;
+}
+// END Pie Charts ----------------------------------------------

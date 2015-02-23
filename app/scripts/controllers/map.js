@@ -539,18 +539,18 @@ angular.module('swcosClientMapApp')
     $scope.site = site;
     console.log(site)
 
-    var siteAffil_ = function(){
-      for(var key in site){
-        $scope.affiliateDetails.map(function(affil){
-          if(affil['Affiliate Name'] == key && site[key]){
-            $scope.site['Affiliate website'] = affil['Website'];
-            $scope.site['Affiliate contact name'] = affil['Contact Name'];
-            $scope.site['Affiliate contact email'] = affil['Contact Email'];
-          }
-        })
-      }
-    }
-    siteAffil_();
+    //var siteAffil_ = function(){
+      //for(var key in site){
+       // $scope.affiliateDetails.map(function(affil){
+         // if(affil['Affiliate Name'] == key && site[key]){
+            //$scope.site['Affiliate Name'] = affil['Affiliate Name'];
+            //$scope.site['Affiliate contact name'] = affil['Contact Name'];
+            //$scope.site['Affiliate contact email'] = affil['Contact Email'];
+         // }
+       // })
+     // }
+   // }
+   // siteAffil_();
 
     var dataFunc = function(ls,cat_){
       var siteDataArray = [],
@@ -630,7 +630,7 @@ angular.module('swcosClientMapApp')
       //STATE  http://dhmh.maryland.gov/vsa/Documents/12annual.pdf
       //NATION http://www.cdc.gov/nchs/fastats/life-expectancy.htm
       $scope.lifeData = {
-        labels: ['Nation', 'State', 'This neighborhood'],
+        labels: ['Nation <sup>1</sup>', 'State <sup>2</sup>', 'This CSA <sup>3</sup>'],
         series: [
         [78.7,79.7,csaFunc('life')]
         ]
@@ -639,7 +639,7 @@ angular.module('swcosClientMapApp')
       //MEDIAN INCOME
       //NATION & STATE http://factfinder.census.gov/
       $scope.incomeData = {
-        labels: ['Nation', 'State', 'This neighborhood'],
+        labels: ['Nation <sup>1</sup>', 'State <sup>1</sup>', 'This CSA <sup>2</sup>'],
         series: [
         [60000,73000,csaFunc('income')]
         ]
@@ -649,7 +649,7 @@ angular.module('swcosClientMapApp')
       //NATION & STATE N/A
       //TBD CITY 12.7 http://bniajfi.org/community/Baltimore%20City/
       $scope.schoolData = {
-        labels: ['Nation(N/A)','State(N/A)','This neighborhood'],
+        labels: ['Nation <sup>1</sup>','State <sup>2</sup>','This CSA <sup>3</sup>'],
         series: [
         [0, 0, csaFunc('absent')],
         ]

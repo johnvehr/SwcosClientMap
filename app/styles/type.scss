@@ -1,0 +1,55 @@
+//Main
+
+//top title
+h2 {
+	background-color: $UMBdkGrey;
+	text-align: center;
+	color: $UMBwhite;
+	font-size: 1.3em;
+	padding: 5px;
+	margin: 0px;
+}
+// Top text on sponsors
+.sponsor {
+	text-align: center;
+	font-style: italic;
+	padding: 15px;
+}
+// Instructions above map
+.instructions {
+	text-align: center;
+	background-color: #ccc;
+	font-style: italic;
+	padding: 5px;
+}
+// Filter titles
+.filter-title{
+  margin-top:0px;
+  margin-bottom: 0px;
+  text-align: center;
+  width:100%;
+  background-color: $UMBgold;
+  color: $UMBblack;
+  font-style: italic;
+  padding: 5px;
+}
+
+// Modal Specific Type
+.UMBmapApplicationModal {
+	.barMeta {
+		font-size: .8em;
+		font-style: italic;	
+	}
+	p.siteMeta {
+		margin-bottom: 0px;
+	}
+	p.siteDescription {
+		margin-top: 10px;
+	}
+	.siteAdminInfo {
+		ul, li {
+			padding-top: 3px;
+			background: none;
+		}
+	}
+}
