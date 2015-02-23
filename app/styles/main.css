@@ -3513,12 +3513,12 @@ h2 {
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/modal\.scss}line{font-family:\000034}}
 body.modal-open .supreme-container {
-  -o-filter: blur(15px);
-  -ms-filter: blur(15px);
-  filter: blur(15px);
+  -o-filter: blur(45px);
+  -ms-filter: blur(45px);
+  filter: blur(45px);
   filter: url("data:image/svg+xml;utf9,<svg%20version='1.1'%20xmlns='http://www.w3.org/2000/svg'><filter%20id='blur'><feGaussianBlur%20stdDeviation='10'%20/></filter></svg>#blur");
   filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius='10');
-  -webkit-filter: blur(15px);
+  -webkit-filter: blur(45px);
   -webkit-box-shadow: inset 6px 6px 31px 0px rgba(135, 135, 135, 0.71);
   -moz-box-shadow: inset 6px 6px 31px 0px rgba(135, 135, 135, 0.71);
   box-shadow: inset 6px 6px 31px 0px rgba(135, 135, 135, 0.71);
@@ -3543,14 +3543,14 @@ body.modal-open .supreme-container {
 .swcos-close {
   float: right;
   text-transform: uppercase;
-  color: #fff;
+  color: #FFF;
   background: #ffe202;
   border: none;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/modal\.scss}line{font-family:\0000338}}
 .modal-backdrop {
-  background: #fff;
+  background: #FFF;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/modal\.scss}line{font-family:\0000341}}
