@@ -2792,9 +2792,9 @@ button.close {
   }
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/main\.scss}line{font-family:\0000327}}
-.UMBmapApplication .block ul {
-  padding-left: 0px;
-  margin-top: 0px;
+.UMBmapApplication .block ul, .UMBmapApplication ul.listgroup {
+  padding-left: 0px !important;
+  margin-top: 0px !important;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/bower_components\/chartist\/dist\/scss\/chartist\.scss}line{font-family:\0000390}}
@@ -3802,27 +3802,29 @@ body.modal-open .supreme-container {
   border-radius: 4px;
   overflow: hidden;
   border: 1px solid #1a1a1a;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/main\.scss}line{font-family:\0000380}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/main\.scss}line{font-family:\0000382}}
 .colWrap {
   border-radius: 4px;
   overflow: hidden;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/main\.scss}line{font-family:\0000383}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/main\.scss}line{font-family:\0000385}}
 .colWrap .list-group-item:first-child {
   border-top-right-radius: 0px;
   border-top-left-radius: 0px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/main\.scss}line{font-family:\0000389}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/main\.scss}line{font-family:\0000391}}
 .angular-google-map-container {
   height: 832px;
   max-height: 832px;
   border: 1px solid #D8D6D6;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/main\.scss}line{font-family:\0000396}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/main\.scss}line{font-family:\0000398}}
 .list-group-item {
   padding: 10px 5px;
   padding-bottom: 0px !important;

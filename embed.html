@@ -1,13 +1,4 @@
-<!doctype html>
-<html class="no-js">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width">
-    
-  </head>
-  <body>
+
   
 <!-- Begin UMB Student Mapping Application ------------------------------------------------------------>
   <link rel="stylesheet" href="http://134.192.116.210/node/SwcosClientMap/bower_components/chartist/dist/chartist.min.css" />
@@ -154,7 +145,7 @@
     <div class="col-md-3 col-sm-6">
 	    <div class="colWrap">
       <p class="filter-title">Filter By School</p>
-      <ul class="list-group">
+      <ul id="schoolsList" class="list-group">
         <li class="list-group-item" ng-repeat="school in siteSchools">
           <div class="row">
             <div class="col-md-6" style="padding-top:2%;">
@@ -171,7 +162,7 @@
 
 	  	<div class="colWrap">
         <p class="filter-title">Filter By Affiliate</p>
-        <ul class="list-group">
+        <ul id="affilsList" class="list-group">
           <li class="list-group-item" ng-repeat="affiliate in siteAffiliates">
             <div class="row">
               <div class="col-md-6" style="padding-top:2%;">
@@ -215,6 +206,3 @@
     <script src="http://134.192.116.210/node/SwcosClientMap/app/scripts/controllers/map.js"></script>
     <script src="http://134.192.116.210/node/SwcosClientMap/app/scripts/services/map.js"></script>
 <!-- endbuild --------------------------------------------------------------------------------------------------------------->
-
-</body>
-</html>
