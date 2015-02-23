@@ -3511,35 +3511,35 @@ h2 {
   background: none;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/modal\.scss}line{font-family:\000034}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/modal\.scss}line{font-family:\000036}}
 body.modal-open .supreme-container {
-  -o-filter: blur(45px);
-  -ms-filter: blur(45px);
-  filter: blur(45px);
-  filter: url("data:image/svg+xml;utf9,<svg%20version='1.1'%20xmlns='http://www.w3.org/2000/svg'><filter%20id='blur'><feGaussianBlur%20stdDeviation='10'%20/></filter></svg>#blur");
+  -o-filter: blur(20px);
+  -ms-filter: blur(20px);
+  filter: blur(20px);
+  filter: url("data:image/svg+xml;utf9,<svg%20version='1.1'%20xmlns='http://www.w3.org/2000/svg'><filter%20id='blur'><feGaussianBlur%20stdDeviation='20'%20/></filter></svg>#blur");
   filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius='10');
-  -webkit-filter: blur(45px);
+  -webkit-filter: blur(20px);
   -webkit-box-shadow: inset 6px 6px 31px 0px rgba(135, 135, 135, 0.71);
   -moz-box-shadow: inset 6px 6px 31px 0px rgba(135, 135, 135, 0.71);
   box-shadow: inset 6px 6px 31px 0px rgba(135, 135, 135, 0.71);
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/modal\.scss}line{font-family:\0000316}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/modal\.scss}line{font-family:\0000320}}
 .modal-dialog {
   width: 75%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/modal\.scss}line{font-family:\0000320}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/modal\.scss}line{font-family:\0000324}}
 .modal-body {
   color: #4f4f4f;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/modal\.scss}line{font-family:\0000323}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/modal\.scss}line{font-family:\0000327}}
 .modal-body .row h1 {
   text-transform: uppercase;
   font-size: 20px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/modal\.scss}line{font-family:\0000330}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/modal\.scss}line{font-family:\0000334}}
 .swcos-close {
   float: right;
   text-transform: uppercase;
@@ -3548,17 +3548,17 @@ body.modal-open .supreme-container {
   border: none;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/modal\.scss}line{font-family:\0000338}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/modal\.scss}line{font-family:\0000342}}
 .modal-backdrop {
   background: #FFF;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/modal\.scss}line{font-family:\0000341}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/modal\.scss}line{font-family:\0000346}}
 .modal {
-  background: rgba(252, 252, 252, 0.4);
+  background: rgba(252, 252, 252, 0.7);
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/modal\.scss}line{font-family:\0000344}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/modal\.scss}line{font-family:\0000349}}
 .modal-content {
   background: rgba(252, 252, 252, 0);
   border: none;

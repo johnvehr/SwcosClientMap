@@ -1,16 +1,20 @@
 // Modals
 
 //modal background
-body.modal-open .supreme-container{
-  -o-filter: blur(45px);
-  -ms-filter: blur(45px);
-  filter: blur(45px);
-  filter: url("data:image/svg+xml;utf9,<svg%20version='1.1'%20xmlns='http://www.w3.org/2000/svg'><filter%20id='blur'><feGaussianBlur%20stdDeviation='10'%20/></filter></svg>#blur");
+body.modal-open {
+
+.supreme-container{
+  -o-filter: blur(20px);
+  -ms-filter: blur(20px);
+  filter: blur(20px);
+  filter: url("data:image/svg+xml;utf9,<svg%20version='1.1'%20xmlns='http://www.w3.org/2000/svg'><filter%20id='blur'><feGaussianBlur%20stdDeviation='20'%20/></filter></svg>#blur");
   filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='10');
-  -webkit-filter: blur(45px);
+  -webkit-filter: blur(20px);
   -webkit-box-shadow: inset 6px 6px 31px 0px rgba(135,135,135,0.71);
   -moz-box-shadow: inset 6px 6px 31px 0px rgba(135,135,135,0.71);
   box-shadow: inset 6px 6px 31px 0px rgba(135,135,135,0.71);
+
+}
 }
 
 .modal-dialog {
@@ -38,8 +42,9 @@ body.modal-open .supreme-container{
 .modal-backdrop {
   background:#FFF;
 }
+
 .modal{
-  background:rgba(252, 252, 252, 0.4);
+  background:rgba(252, 252, 252, 0.7);
 }
 .modal-content{
   background:rgba(252, 252, 252, 0);
