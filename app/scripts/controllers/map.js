@@ -49,7 +49,7 @@ angular.module('swcosClientMapApp')
         var ret = {
           id: site.id,
           //icon: '/images/swcos-marker.png',
-          icon: 'http://localhost:8000/images/swcos-marker.png',
+          icon: 'http://134.192.116.210/node/SwcosClientMap/app/images/swcos-marker.png',
           latitude: site.lat,
           longitude: site.lng,
           displaySiteData: function(){
