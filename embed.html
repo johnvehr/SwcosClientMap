@@ -1,188 +1,175 @@
-
-  
 <!-- Begin UMB Student Mapping Application ------------------------------------------------------------>
   <link rel="stylesheet" href="http://134.192.116.210/node/SwcosClientMap/bower_components/chartist/dist/chartist.min.css" />
   <link rel="stylesheet" href="http://134.192.116.210/node/SwcosClientMap/app/styles/main.css">
 <div ng-view="main" class="UMBmapApplication supreme-container " ng-controller="MapCtrl" ng-app="swcosClientMapApp">
-<!-- MODAL -->
-<script type="text/ng-template" id="displaySiteData.html">
-<div class="modal-body UMBmapApplicationModal">
-  <div class="row">
-  <button class="btn btn-default swcos-close" ng-click="ok()">x</button>
-    <div class="col-md-12">
-
-      <div class="row">
-        <!-- left side of modal -->
-        <div class="col-md-6">
-          <h1>{{site.Site}}</h1>
-          <h4>CSA: {{site.CSA}}</h4>
-          <p class="siteMeta" ng-hide="!site.Website"><strong>Website: </strong><a href="{{site.Website}}" target="_blank">{{site.Website}}</a></p>
-          <p class="siteMeta" ng-hide="!site.Location"><strong>Location: </strong>{{site.Location}}</p>
-          <p class="siteMeta" ng-hide="!site.Contact"><strong>Contact Name: </strong>{{site.Contact}}</p>
-          <p class="siteMeta" ng-hide="!site['Contact email']"><strong>Contact Email: </strong><a href="mailto:{{site['Contact email']}}">{{site['Contact email']}}</a></p>
-          <p class="siteMeta" ng-hide="!site['Site Phone No.']"><strong>Contact Phone: </strong>{{site['Site Phone No.']}}</p>
-          <p class="siteDescription" ng-hide="!site['Site Description']">{{site['Site Description']}}</p>
-          <p ng-hide="site['Site Description']">No site description provided.</p>
-          <h4>{{stud_sum}} University of Maryland Baltimore Student<span ng-hide="stud_sum == 1">s</span> Involved</h4>
-          <div class="row">
-            <!-- left pie -->
-            <div class="col-sm-6 schools">
-              <chartist class="ct-chart ct-golden-section" chartist-data="data" chartist-chart-type="Pie"></chartist>
-              <h4>By School</h4>
-              <ul class="list-group pieChart">
-                <li class="list-group-item" ng-repeat="label in dataBySchool">
-                  <span class="badge">{{label[1]}}</span>{{label[0]}}
-                </li>
-              </ul>
-            </div>
-            <!-- right pie -->
-            <div class="col-sm-6 discipline">
-              <chartist class="ct-chart ct-golden-section" chartist-data="dataDiscipline" chartist-chart-type="Pie"></chartist>
-              <h4>By Discipline</h4>
-              <ul class="list-group pieChart">
-                <li class="list-group-item disc" ng-repeat="label in dataByDiscipline">
-                  <span class="badge">{{label[1]}}</span>{{label[0]}}
-                </li>
-              </ul>
-
-            </div>
-            
-            
-              
-          </div>
-          
-          <h5>Administrator Affiliate Data for site ID: {{site['id']}}</h5>
-          <ul class="list-group siteAdminInfo">
-                <li class="list-group-item disc" ng-hide="!site['Promise Heights']">
-                  <span class="badge">{{site['Promise Heights']}}</span>Promise Heights
-                </li>
-                <li class="list-group-item disc" ng-hide="!site['Family Stability']">
-                  <span class="badge">{{site['Family Stability']}}</span>Family Stability
-                </li>
-                <li class="list-group-item disc" ng-hide="!site['Seniors']">
-                  <span class="badge">{{site['Seniors']}}</span>Seniors
-                </li>
-                <li class="list-group-item disc" ng-hide="!site['Immigrants']">
-                  <span class="badge">{{site['Immigrants']}}</span>Immigrants
-                </li>
-                <li class="list-group-item disc" ng-hide="!site['Community Schools (Affiliate)']">
-                  <span class="badge">{{site['Community Schools (Affiliate)']}}</span>Community Schools
-                </li>
-                <li class="list-group-item disc" ng-hide="!site['SWCOS']">
-                  <span class="badge">{{site['SWCOS']}}</span>SWCOS
-                </li>
-                <li class="list-group-item disc" ng-hide="!site['K-12']">
-                  <span class="badge">{{site['K-12']}}</span>K-12
-                </li>
-              </ul>
-              
-        </div>
-        
-        <!-- right side of modal - bar charts -->
-        <div class="col-md-6">
-          <h1>What&#39s Happening In {{site.CSA}}</h1>
-          <div class="bar-wrapper">
-            <h4>Median Income</h4>
-            <p class="barDescription">Median household income, in US Dollars (2008-2012)</p>
-            <chartist class="ct-chart ct-golden-section" chartist-data="incomeData" chartist-events="" chartist-chart-type="Bar" chartist-chart-options="barOptions" chartist-responsive-options="barResponsiveOptions"></chartist>
-            <ol class=barMeta>
-		      <li>US Census, <a href="http://factfinder.census.gov/">census.gov</a></li>
-		      <li>Baltimore Neighborhood Indicators Alliance, <a href="http://bniajfi.org/vital_signs/data_downloads/">bniajfi.org</a></li>
-            </ol>
-          </div>
-          <div class="bar-wrapper">
-            <h4>School Absenteeism</h4>
-            <p class="barDescription">Percent of 6th-8th grade students that are chronically absent (Missing at least 20 days) (2012)</p>
-            <chartist class="ct-chart ct-golden-section" chartist-data="schoolData" chartist-events="" chartist-chart-type="Bar" chartist-chart-options="barOptions" chartist-responsive-options="barResponsiveOptions"></chartist>
-            <ol class=barMeta>
-		      <li>Unavailable</li>
-		      <li>Unavailable</li>
-		      <li>Baltimore Neighborhood Indicators Alliance, <a href="http://bniajfi.org/vital_signs/data_downloads/">bniajfi.org</a></li>
-            </ol>
-          </div>
-          <div class="bar-wrapper bw-last">
-            <h4>Life Expectancy</h4>
-            <p class="barDescription">Average life expectancy, measured in years (2012)</p>
-            <chartist class="ct-chart ct-golden-section" chartist-data="lifeData" chartist-events="" chartist-chart-type="Bar" chartist-chart-options="barOptions" chartist-responsive-options="barResponsiveOptions"></chartist>
-            <ol class=barMeta>
-		      <li>Centers for Disease Control and Prevention, <a href="http://www.cdc.gov/nchs/fastats/life-expectancy.htm">cdc.gov</a></li>
-		      <li>Maryland DHMH, <a href="http://dhmh.maryland.gov/vsa/Documents/12annual.pdf">dhmh.maryland.gov</a></li>
-		      <li>Baltimore Neighborhood Indicators Alliance, <a href="http://bniajfi.org/vital_signs/data_downloads/">bniajfi.org</a></li>
-            </ol>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</div>
-</script>
-<!-- END MODAL -->
-
-<!-- MAP -->
-<div class="containerMappingApp">
-	<div class="row">
-	<h2>University of Maryland Baltimore: Students Working in Baltimore</h2>
+	<!-- MODAL -->
+	<script type="text/ng-template" id="displaySiteData.html">
+	<div class="modal-body UMBmapApplicationModal">
+	  <div class="row">
+	  <button class="btn btn-default swcos-close" ng-click="ok()">x</button>
+	    <div class="col-md-12">
+	      <div class="row">
+	        <!-- left side of modal -->
+	        <div class="col-md-6">
+	          <h1>{{site.Site}}</h1>
+	          <h4>CSA: {{site.CSA}}</h4>
+	          <p class="siteMeta" ng-hide="!site.Website"><strong>Website: </strong><a href="{{site.Website}}" target="_blank">{{site.Website}}</a></p>
+	          <p class="siteMeta" ng-hide="!site.Location"><strong>Location: </strong>{{site.Location}}</p>
+	          <p class="siteMeta" ng-hide="!site.Contact"><strong>Contact Name: </strong>{{site.Contact}}</p>
+	          <p class="siteMeta" ng-hide="!site['Contact email']"><strong>Contact Email: </strong><a href="mailto:{{site['Contact email']}}">{{site['Contact email']}}</a></p>
+	          <p class="siteMeta" ng-hide="!site['Site Phone No.']"><strong>Contact Phone: </strong>{{site['Site Phone No.']}}</p>
+	          <p class="siteDescription" ng-hide="!site['Site Description']">{{site['Site Description']}}</p>
+	          <p ng-hide="site['Site Description']">No site description provided.</p>
+	          <h4>{{stud_sum}} University of Maryland Baltimore Student<span ng-hide="stud_sum == 1">s</span> Involved</h4>
+	          <div class="row">
+	            <!-- left pie -->
+	            <div class="col-sm-6 schools">
+	              <chartist class="ct-chart ct-golden-section" chartist-data="data" chartist-chart-type="Pie"></chartist>
+	              <h4>By School</h4>
+	              <ul class="list-group pieChart">
+	                <li class="list-group-item" ng-repeat="label in dataBySchool">
+	                  <span class="badge">{{label[1]}}</span>{{label[0]}}
+	                </li>
+	              </ul>
+	            </div>
+	            <!-- right pie -->
+	            <div class="col-sm-6 discipline">
+	              <chartist class="ct-chart ct-golden-section" chartist-data="dataDiscipline" chartist-chart-type="Pie"></chartist>
+	              <h4>By Discipline</h4>
+	              <ul class="list-group pieChart">
+	                <li class="list-group-item disc" ng-repeat="label in dataByDiscipline">
+	                  <span class="badge">{{label[1]}}</span>{{label[0]}}
+	                </li>
+	              </ul>
+	            </div>
+	          </div>
+	          
+	          <h5>Administrator Affiliate Data for site ID: {{site['id']}}</h5>
+			  	<ul class="list-group siteAdminInfo">
+	                <li class="list-group-item disc" ng-hide="!site['Promise Heights']">
+	                  <span class="badge">{{site['Promise Heights']}}</span>Promise Heights
+	                </li>
+	                <li class="list-group-item disc" ng-hide="!site['Family Stability']">
+	                  <span class="badge">{{site['Family Stability']}}</span>Family Stability
+	                </li>
+	                <li class="list-group-item disc" ng-hide="!site['Seniors']">
+	                  <span class="badge">{{site['Seniors']}}</span>Seniors
+	                </li>
+	                <li class="list-group-item disc" ng-hide="!site['Immigrants']">
+	                  <span class="badge">{{site['Immigrants']}}</span>Immigrants
+	                </li>
+	                <li class="list-group-item disc" ng-hide="!site['Community Schools (Affiliate)']">
+	                  <span class="badge">{{site['Community Schools (Affiliate)']}}</span>Community Schools
+	                </li>
+	                <li class="list-group-item disc" ng-hide="!site['SWCOS']">
+	                  <span class="badge">{{site['SWCOS']}}</span>SWCOS
+	                </li>
+	                <li class="list-group-item disc" ng-hide="!site['K-12']">
+	                  <span class="badge">{{site['K-12']}}</span>K-12
+	                </li>
+	             </ul> 
+	        </div>
+	        
+	        <!-- right side of modal - bar charts -->
+	        <div class="col-md-6">
+	          <h1>What&#39s Happening In {{site.CSA}}</h1>
+	          <div class="bar-wrapper">
+	            <h4>Median Income</h4>
+	            <p class="barDescription">Median household income, in US Dollars (2008-2012)</p>
+	            <chartist class="ct-chart ct-golden-section" chartist-data="incomeData" chartist-events="" chartist-chart-type="Bar" chartist-chart-options="barOptions" chartist-responsive-options="barResponsiveOptions"></chartist>
+	            <ol class=barMeta>
+			      <li>US Census, <a href="http://factfinder.census.gov/">census.gov</a></li>
+			      <li>Baltimore Neighborhood Indicators Alliance, <a href="http://bniajfi.org/vital_signs/data_downloads/">bniajfi.org</a></li>
+	            </ol>
+	          </div>
+	          <div class="bar-wrapper">
+	            <h4>School Absenteeism</h4>
+	            <p class="barDescription">Percent of 6th-8th grade students that are chronically absent (Missing at least 20 days) (2012)</p>
+	            <chartist class="ct-chart ct-golden-section" chartist-data="schoolData" chartist-events="" chartist-chart-type="Bar" chartist-chart-options="barOptions" chartist-responsive-options="barResponsiveOptions"></chartist>
+	            <ol class=barMeta>
+			      <li>Unavailable</li>
+			      <li>Unavailable</li>
+			      <li>Baltimore Neighborhood Indicators Alliance, <a href="http://bniajfi.org/vital_signs/data_downloads/">bniajfi.org</a></li>
+	            </ol>
+	          </div>
+	          <div class="bar-wrapper bw-last">
+	            <h4>Life Expectancy</h4>
+	            <p class="barDescription">Average life expectancy, measured in years (2012)</p>
+	            <chartist class="ct-chart ct-golden-section" chartist-data="lifeData" chartist-events="" chartist-chart-type="Bar" chartist-chart-options="barOptions" chartist-responsive-options="barResponsiveOptions"></chartist>
+	            <ol class=barMeta>
+			      <li>Centers for Disease Control and Prevention, <a href="http://www.cdc.gov/nchs/fastats/life-expectancy.htm">cdc.gov</a></li>
+			      <li>Maryland DHMH, <a href="http://dhmh.maryland.gov/vsa/Documents/12annual.pdf">dhmh.maryland.gov</a></li>
+			      <li>Baltimore Neighborhood Indicators Alliance, <a href="http://bniajfi.org/vital_signs/data_downloads/">bniajfi.org</a></li>
+	            </ol>
+	          </div>
+	        </div>
+	      </div>
+	    </div>
+	
+	  </div>
 	</div>
-  <div class="row">
+	</script>
+	<!-- END MODAL -->
+	
+	<!-- MAP -->
+	<div class="containerMappingApp">
+		<div class="row">
+		<h2>University of Maryland Baltimore: Students Working in Baltimore</h2>
+		</div>
 	  
-        <p class="sponsor">Interactive Map provided in thanks to a generous grant from the
-        Joseph and Harvey Meyerhoff Family Charitable Funds and the Social Work Community Outreach Service (SWCOS)</p>
-
-    <div class="col-md-9">
-	  <div class="colWrap">
-      <div class="instructions">Click on a yellow marker within the map to display information about individual Sites</div>
-
-      <ui-gmap-google-map center='map.center' zoom='map.zoom' options="map.mapOptions">
-
-        <ui-gmap-markers models="siteMarkers" click="'displaySiteData'" coords="'self'" icon="'icon'">
-        </ui-gmap-markers>
-
-      </ui-gmap-google-map>
-    </div>
-    </div>
-
-    <div class="col-md-3 col-sm-6">
-	    <div class="colWrap">
-      <p class="filter-title">Filter By School</p>
-      <ul id="schoolsList" class="list-group">
-        <li class="list-group-item" ng-repeat="school in siteSchools">
-          <div class="row">
-            <div class="col-md-6" style="padding-top:2%;">
-              <p>{{school}}<p>
-            </div>
-            <div class="col-md-6">
-              <input id="{{school}}" class="school" type="checkbox" ng-click="toggleSchool(school)">
-              <label class="school__label" for="{{school}}"></label>
-            </div>
-          </div>
-        </li>
-      </ul>
-      </div>
-
-	  	<div class="colWrap">
-        <p class="filter-title">Filter By Affiliate</p>
-        <ul id="affilsList" class="list-group">
-          <li class="list-group-item" ng-repeat="affiliate in siteAffiliates">
-            <div class="row">
-              <div class="col-md-6" style="padding-top:2%;">
-                <p>{{affiliate}}</p>
-              </div>
-              <div class="col-md-6" style="padding-top:3%;">
-                <input id="{{affiliate}}" class="school" type="checkbox" ng-click="toggleSchool(affiliate)" >
-                <label id="test" class="school__label" for="{{affiliate}}"></label>
-              </div>
-            </div>
-          </li>
-        </ul>
-	  	</div>
-      </div>
-  </div>
+	    <div class="row">
+		  
+	        <p class="sponsor">Interactive Map provided in thanks to a generous grant from the
+	        Joseph and Harvey Meyerhoff Family Charitable Funds and the Social Work Community Outreach Service (SWCOS)</p>
+	
+	    <div class="col-md-9">
+		  <div class="colWrap">
+	      <div class="instructions">Click on a yellow marker within the map to display information about individual Sites</div>
+	      <ui-gmap-google-map center='map.center' zoom='map.zoom' options="map.mapOptions">
+	        <ui-gmap-markers models="siteMarkers" click="'displaySiteData'" coords="'self'" icon="'icon'">
+	        </ui-gmap-markers>
+	      </ui-gmap-google-map>
+	    </div>
+	    </div>
+	
+	    <div class="col-md-3 col-sm-6">
+		    <div class="colWrap">
+	      <p class="filter-title">Filter By School</p>
+	      <ul id="schoolsList" class="list-group">
+	        <li class="list-group-item" ng-repeat="school in siteSchools">
+	          <div class="row">
+	            <div class="col-md-6">
+	              <p>{{school}}<p>
+	            </div>
+	            <div class="col-md-6">
+	              <input id="{{school}}" class="school" type="checkbox" ng-click="toggleSchool(school)">
+	              <label class="school__label" for="{{school}}"></label>
+	            </div>
+	          </div>
+	        </li>
+	      </ul>
+	      </div>
+	
+		  	<div class="colWrap">
+	        <p class="filter-title">Filter By Affiliate</p>
+	        <ul id="affilsList" class="list-group">
+	          <li class="list-group-item" ng-repeat="affiliate in siteAffiliates">
+	            <div class="row">
+	              <div class="col-md-6">
+	                <p>{{affiliate}}</p>
+	              </div>
+	              <div class="col-md-6">
+	                <input id="{{affiliate}}" class="school" type="checkbox" ng-click="toggleSchool(affiliate)" >
+	                <label id="test" class="school__label" for="{{affiliate}}"></label>
+	              </div>
+	            </div>
+	          </li>
+	        </ul>
+		  	</div>
+	      </div>
+	  </div>
+	</div>
 </div>
-
-      </div>
-
-
 
     <script src='//maps.googleapis.com/maps/api/js?sensor=false'></script>
     <!--[if lt IE 9]>

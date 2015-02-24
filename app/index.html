@@ -162,7 +162,7 @@
       <ul id="schoolsList" class="list-group">
         <li class="list-group-item" ng-repeat="school in siteSchools">
           <div class="row">
-            <div class="col-md-6" style="padding-top:2%;">
+            <div class="col-md-6">
               <p>{{school}}<p>
             </div>
             <div class="col-md-6">
@@ -179,10 +179,10 @@
         <ul id="affilsList" class="list-group">
           <li class="list-group-item" ng-repeat="affiliate in siteAffiliates">
             <div class="row">
-              <div class="col-md-6" style="padding-top:2%;">
+              <div class="col-md-6">
                 <p>{{affiliate}}</p>
               </div>
-              <div class="col-md-6" style="padding-top:3%;">
+              <div class="col-md-6">
                 <input id="{{affiliate}}" class="school" type="checkbox" ng-click="toggleSchool(affiliate)" >
                 <label id="test" class="school__label" for="{{affiliate}}"></label>
               </div>
