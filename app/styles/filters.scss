@@ -1,4 +1,5 @@
 // Settings for the filter sliders
+.UMBmapApplication {
 .school{
   visibility: hidden;
 }
@@ -30,7 +31,7 @@
 .school:checked + .school__label:after {
   content: '';
   //background: $social_work;
-  background: $UMBgold;
+  background: #ffe202;
 }
 .school:checked + .school__label[id="test"]:after {
   content: '';
@@ -56,4 +57,5 @@
 .school__label:after,.school__label:before {
   -webkit-transition: background 0.2s ease-out, left 0.2s ease-out;
   -moz-transition: background 0.2s ease-out, left 0.2s ease-out;
+}
 }
