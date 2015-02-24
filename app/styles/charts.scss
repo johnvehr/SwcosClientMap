@@ -1,4 +1,5 @@
-.UMBmapApplication {
+@import "variables.scss";
+
 // Modal bar charts
 .bar-wrapper{
   padding: 10px;
@@ -129,6 +130,7 @@
 }
 }
 
+
 .school-label{
   margin:-4px;
   margin-right:4px;
@@ -142,4 +144,3 @@
   padding-top:30%;
 }
 // END Pie Charts ----------------------------------------------
-}

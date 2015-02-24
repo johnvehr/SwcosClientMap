@@ -3010,12 +3010,12 @@ button.close {
   left: 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/type\.scss}line{font-family:\000033}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/type\.scss}line{font-family:\000034}}
 .UMBmapApplication h1, .UMBmapApplication h2, .UMBmapApplication h3, .UMBmapApplication h4, .UMBmapApplication h5, .UMBmapApplication h6,
 .UMBmapApplication .h1, .UMBmapApplication .h2, .UMBmapApplication .h3, .UMBmapApplication .h4, .UMBmapApplication .h5, .UMBmapApplication .h6 {
   font-family: sans-serif;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/type\.scss}line{font-family:\0000311}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/type\.scss}line{font-family:\0000312}}
 .UMBmapApplication h2 {
   text-align: center;
   color: #1a1a1a;
@@ -3024,12 +3024,12 @@ button.close {
   padding: 5px;
   margin: 0px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/type\.scss}line{font-family:\0000320}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/type\.scss}line{font-family:\0000321}}
 .UMBmapApplication .sponsor {
   text-align: center;
   padding: 15px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/type\.scss}line{font-family:\0000326}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/type\.scss}line{font-family:\0000327}}
 .UMBmapApplication .instructions {
   text-align: center;
   background-color: #d3d3d3;
@@ -3117,11 +3117,11 @@ body.modal-open .supreme-container {
   box-shadow: none;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/filters\.scss}line{font-family:\000033}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/filters\.scss}line{font-family:\000034}}
 .UMBmapApplication .school {
   visibility: hidden;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/filters\.scss}line{font-family:\000037}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/filters\.scss}line{font-family:\000038}}
 .UMBmapApplication .school__label {
   background-color: rgba(26, 26, 26, 0);
   padding: 9px;
@@ -3132,7 +3132,7 @@ body.modal-open .supreme-container {
   width: 58px;
   height: 30px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/filters\.scss}line{font-family:\0000319}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/filters\.scss}line{font-family:\0000320}}
 .UMBmapApplication .school__label:after {
   content: '';
   position: absolute;
@@ -3143,17 +3143,17 @@ body.modal-open .supreme-container {
   height: 100%;
   border-radius: 70px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/filters\.scss}line{font-family:\0000331}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/filters\.scss}line{font-family:\0000332}}
 .UMBmapApplication .school:checked + .school__label:after {
   content: '';
   background: #ffe202;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/filters\.scss}line{font-family:\0000336}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/filters\.scss}line{font-family:\0000337}}
 .UMBmapApplication .school:checked + .school__label[id="test"]:after {
   content: '';
   background: #00a9bc;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/filters\.scss}line{font-family:\0000341}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/filters\.scss}line{font-family:\0000342}}
 .UMBmapApplication .school__label:before {
   content: '';
   position: absolute;
@@ -3165,166 +3165,178 @@ body.modal-open .supreme-container {
   height: 25px;
   border-radius: 100px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/filters\.scss}line{font-family:\0000353}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/filters\.scss}line{font-family:\0000354}}
 .UMBmapApplication .school:checked + .school__label:before {
   left: 31px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/filters\.scss}line{font-family:\0000357}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/filters\.scss}line{font-family:\0000358}}
 .UMBmapApplication .school__label:after, .UMBmapApplication .school__label:before {
   -webkit-transition: background 0.2s ease-out, left 0.2s ease-out;
   -moz-transition: background 0.2s ease-out, left 0.2s ease-out;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/charts\.scss}line{font-family:\000033}}
-.UMBmapApplication .bar-wrapper {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/charts\.scss}line{font-family:\000034}}
+.bar-wrapper {
   padding: 10px;
   border-top: 1px solid rgba(51, 51, 51, 0.2);
   border-left: 1px solid rgba(51, 51, 51, 0.2);
   border-right: 1px solid rgba(51, 51, 51, 0.2);
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/charts\.scss}line{font-family:\000038}}
-.UMBmapApplication .bar-wrapper h4 {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/charts\.scss}line{font-family:\000039}}
+.bar-wrapper h4 {
   margin-top: 0px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/charts\.scss}line{font-family:\0000312}}
-.UMBmapApplication .bw-last {
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/charts\.scss}line{font-family:\0000313}}
+.bw-last {
   border-bottom: 1px solid rgba(51, 51, 51, 0.2);
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/charts\.scss}line{font-family:\0000316}}
-.UMBmapApplication .ct-label.ct-horizontal {
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/charts\.scss}line{font-family:\0000317}}
+.ct-label.ct-horizontal {
   text-align: center !important;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/charts\.scss}line{font-family:\0000319}}
-.UMBmapApplication .ct-label {
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/charts\.scss}line{font-family:\0000320}}
+.ct-label {
   font-size: 1.2rem !important;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/charts\.scss}line{font-family:\0000322}}
-.UMBmapApplication .bars {
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/charts\.scss}line{font-family:\0000323}}
+.bars {
   text-align: center;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/charts\.scss}line{font-family:\0000324}}
-.UMBmapApplication .bar-sec {
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/charts\.scss}line{font-family:\0000325}}
+.bar-sec {
   padding-top: 10px;
   border-top: 1px solid lightgray;
   border-left: 1px solid lightgray;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/charts\.scss}line{font-family:\0000331}}
-.UMBmapApplication .ct-bar {
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/charts\.scss}line{font-family:\0000332}}
+.ct-bar {
   stroke: rgba(26, 26, 26, 0.99) !important;
   stroke-width: 23px !important;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/charts\.scss}line{font-family:\0000336}}
-.UMBmapApplication .ct-bar:nth-child(2) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/charts\.scss}line{font-family:\0000337}}
+.ct-bar:nth-child(2) {
   stroke: rgba(26, 26, 26, 0.85) !important;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/charts\.scss}line{font-family:\0000340}}
-.UMBmapApplication .ct-bar:nth-child(3) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/charts\.scss}line{font-family:\0000341}}
+.ct-bar:nth-child(3) {
   stroke: rgba(26, 26, 26, 0.65) !important;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/charts\.scss}line{font-family:\0000343}}
-.UMBmapApplication .ct-label {
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/charts\.scss}line{font-family:\0000344}}
+.ct-label {
   display: none;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/charts\.scss}line{font-family:\0000349}}
-.UMBmapApplication .pieChart .list-group-item {
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/charts\.scss}line{font-family:\0000350}}
+.pieChart .list-group-item {
   background: none;
   border: none;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/charts\.scss}line{font-family:\0000353}}
-.UMBmapApplication .pieChart .list-group-item .badge {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/charts\.scss}line{font-family:\0000354}}
+.pieChart .list-group-item .badge {
   background: none;
   color: #fff;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/charts\.scss}line{font-family:\0000357}}
-.UMBmapApplication .pieChart .list-group-item:nth-child(1) .badge {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/charts\.scss}line{font-family:\0000358}}
+.pieChart .list-group-item:nth-child(1) .badge {
   background-color: #e51837;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/charts\.scss}line{font-family:\0000360}}
-.UMBmapApplication .pieChart .list-group-item:nth-child(2) .badge {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/charts\.scss}line{font-family:\0000361}}
+.pieChart .list-group-item:nth-child(2) .badge {
   background-color: #00a9bc;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/charts\.scss}line{font-family:\0000363}}
-.UMBmapApplication .pieChart .list-group-item:nth-child(3) .badge {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/charts\.scss}line{font-family:\0000364}}
+.pieChart .list-group-item:nth-child(3) .badge {
   background-color: #ffcb00;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/charts\.scss}line{font-family:\0000366}}
-.UMBmapApplication .pieChart .list-group-item:nth-child(4) .badge {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/charts\.scss}line{font-family:\0000367}}
+.pieChart .list-group-item:nth-child(4) .badge {
   background-color: #8cc63f;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/charts\.scss}line{font-family:\0000369}}
-.UMBmapApplication .pieChart .list-group-item:nth-child(5) .badge {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/charts\.scss}line{font-family:\0000370}}
+.pieChart .list-group-item:nth-child(5) .badge {
   background-color: #4f4f4f;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/charts\.scss}line{font-family:\0000376}}
-.UMBmapApplication .pieChart .list-group-item.disc:nth-child(1) .badge {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/charts\.scss}line{font-family:\0000377}}
+.pieChart .list-group-item.disc:nth-child(1) .badge {
   background-color: #037F3B;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/charts\.scss}line{font-family:\0000379}}
-.UMBmapApplication .pieChart .list-group-item.disc:nth-child(2) .badge {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/charts\.scss}line{font-family:\0000380}}
+.pieChart .list-group-item.disc:nth-child(2) .badge {
   background-color: #9E005D;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/charts\.scss}line{font-family:\0000382}}
-.UMBmapApplication .pieChart .list-group-item.disc:nth-child(3) .badge {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/charts\.scss}line{font-family:\0000383}}
+.pieChart .list-group-item.disc:nth-child(3) .badge {
   background-color: #F15A24;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/charts\.scss}line{font-family:\0000385}}
-.UMBmapApplication .pieChart .list-group-item.disc:nth-child(4) .badge {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/charts\.scss}line{font-family:\0000386}}
+.pieChart .list-group-item.disc:nth-child(4) .badge {
   background-color: #0073BA;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/charts\.scss}line{font-family:\0000388}}
-.UMBmapApplication .pieChart .list-group-item.disc:nth-child(5) .badge {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/charts\.scss}line{font-family:\0000389}}
+.pieChart .list-group-item.disc:nth-child(5) .badge {
   background-color: #4f4f4f;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/charts\.scss}line{font-family:\0000396}}
-.UMBmapApplication .schools .ct-chart .ct-series.ct-series-a .ct-slice:not(.ct-donut) {
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/charts\.scss}line{font-family:\0000397}}
+.schools .ct-chart .ct-series.ct-series-a .ct-slice:not(.ct-donut) {
   fill: #e51837;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/charts\.scss}line{font-family:\0000399}}
-.UMBmapApplication .schools .ct-chart .ct-series.ct-series-b .ct-slice:not(.ct-donut) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/charts\.scss}line{font-family:\00003100}}
+.schools .ct-chart .ct-series.ct-series-b .ct-slice:not(.ct-donut) {
   fill: #00a9bc;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/charts\.scss}line{font-family:\00003102}}
-.UMBmapApplication .schools .ct-chart .ct-series.ct-series-c .ct-slice:not(.ct-donut) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/charts\.scss}line{font-family:\00003103}}
+.schools .ct-chart .ct-series.ct-series-c .ct-slice:not(.ct-donut) {
   fill: #ffcb00;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/charts\.scss}line{font-family:\00003105}}
-.UMBmapApplication .schools .ct-chart .ct-series.ct-series-d .ct-slice:not(.ct-donut) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/charts\.scss}line{font-family:\00003106}}
+.schools .ct-chart .ct-series.ct-series-d .ct-slice:not(.ct-donut) {
   fill: #8cc63f;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/charts\.scss}line{font-family:\00003108}}
-.UMBmapApplication .schools .ct-chart .ct-series.ct-series-e .ct-slice:not(.ct-donut) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/charts\.scss}line{font-family:\00003109}}
+.schools .ct-chart .ct-series.ct-series-e .ct-slice:not(.ct-donut) {
   fill: #4f4f4f;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/charts\.scss}line{font-family:\00003115}}
-.UMBmapApplication .discipline .ct-chart .ct-series.ct-series-a .ct-slice:not(.ct-donut) {
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/charts\.scss}line{font-family:\00003116}}
+.discipline .ct-chart .ct-series.ct-series-a .ct-slice:not(.ct-donut) {
   fill: #037F3B;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/charts\.scss}line{font-family:\00003118}}
-.UMBmapApplication .discipline .ct-chart .ct-series.ct-series-b .ct-slice:not(.ct-donut) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/charts\.scss}line{font-family:\00003119}}
+.discipline .ct-chart .ct-series.ct-series-b .ct-slice:not(.ct-donut) {
   fill: #9E005D;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/charts\.scss}line{font-family:\00003121}}
-.UMBmapApplication .discipline .ct-chart .ct-series.ct-series-c .ct-slice:not(.ct-donut) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/charts\.scss}line{font-family:\00003122}}
+.discipline .ct-chart .ct-series.ct-series-c .ct-slice:not(.ct-donut) {
   fill: #F15A24;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/charts\.scss}line{font-family:\00003124}}
-.UMBmapApplication .discipline .ct-chart .ct-series.ct-series-d .ct-slice:not(.ct-donut) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/charts\.scss}line{font-family:\00003125}}
+.discipline .ct-chart .ct-series.ct-series-d .ct-slice:not(.ct-donut) {
   fill: #0073BA;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/charts\.scss}line{font-family:\00003127}}
-.UMBmapApplication .discipline .ct-chart .ct-series.ct-series-e .ct-slice:not(.ct-donut) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/charts\.scss}line{font-family:\00003128}}
+.discipline .ct-chart .ct-series.ct-series-e .ct-slice:not(.ct-donut) {
   fill: #4f4f4f;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/charts\.scss}line{font-family:\00003132}}
-.UMBmapApplication .school-label {
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/charts\.scss}line{font-family:\00003134}}
+.school-label {
   margin: -4px;
   margin-right: 4px;
   width: 20px;
   height: 20px;
   border: none;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/charts\.scss}line{font-family:\00003140}}
-.UMBmapApplication .no-student-data {
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/charts\.scss}line{font-family:\00003142}}
+.no-student-data {
   display: inherit;
   padding-top: 30%;
 }
