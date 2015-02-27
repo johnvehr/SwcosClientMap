@@ -9,6 +9,9 @@ This map is designed to be inserted into seperate and distinct sites, while cmak
 - Files (js/css/etc) are being served from the UM IIS server set up for this project (http://134.192.116.210/node/SwcosClientMap)
 - This application is responsive to a point, but definitely looks better in wider pages.
 
+Local server install for build/troubleshooting/etc
+------------------
+
 **Setup**
   * `npm install`
   * `bower install`
