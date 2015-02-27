@@ -2,7 +2,12 @@
 .UMBmapApplication .school {
   visibility: hidden;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/filters\.scss}line{font-family:\000038}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/filters\.scss}line{font-family:\000039}}
+.UMBmapApplication ul#schoolsList p, .UMBmapApplication ul#affilsList p {
+  margin-left: 10px;
+  margin-top: 4px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/filters\.scss}line{font-family:\0000316}}
 .UMBmapApplication .school__label {
   background-color: rgba(26, 26, 26, 0);
   padding: 9px;
@@ -10,10 +15,11 @@
   display: inline-block;
   position: relative;
   margin-right: 10px;
+  margin-bottom: 4px;
   width: 58px;
   height: 30px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/filters\.scss}line{font-family:\0000320}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/filters\.scss}line{font-family:\0000329}}
 .UMBmapApplication .school__label:after {
   content: '';
   position: absolute;
@@ -24,17 +30,17 @@
   height: 100%;
   border-radius: 70px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/filters\.scss}line{font-family:\0000332}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/filters\.scss}line{font-family:\0000341}}
 .UMBmapApplication .school:checked + .school__label:after {
   content: '';
   background: #ffe202;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/filters\.scss}line{font-family:\0000337}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/filters\.scss}line{font-family:\0000346}}
 .UMBmapApplication .school:checked + .school__label[id="test"]:after {
   content: '';
   background: #00a9bc;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/filters\.scss}line{font-family:\0000342}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/filters\.scss}line{font-family:\0000351}}
 .UMBmapApplication .school__label:before {
   content: '';
   position: absolute;
@@ -46,11 +52,11 @@
   height: 25px;
   border-radius: 100px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/filters\.scss}line{font-family:\0000354}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/filters\.scss}line{font-family:\0000363}}
 .UMBmapApplication .school:checked + .school__label:before {
   left: 31px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/filters\.scss}line{font-family:\0000358}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/EBSrockyMtn\/Sites\/SwcosClientMap\/app\/styles\/filters\.scss}line{font-family:\0000367}}
 .UMBmapApplication .school__label:after, .UMBmapApplication .school__label:before {
   -webkit-transition: background 0.2s ease-out, left 0.2s ease-out;
   -moz-transition: background 0.2s ease-out, left 0.2s ease-out;
