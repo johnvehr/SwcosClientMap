@@ -1,8 +1,10 @@
 @import "variables.scss";
 // Settings for the filter sliders
 .UMBmapApplication {
-.school{
+input.school{
   visibility: hidden;
+  height:0px;
+  width:0px;
 }
 
 ul#schoolsList, ul#affilsList {
